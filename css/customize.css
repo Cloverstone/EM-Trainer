@@ -1,0 +1,15 @@
+#content{
+	overflow: scroll;
+	/* height: 88%; */
+	position: fixed;
+	right: 0px;
+	left: 250px;
+	bottom: 44px;
+	top: 130px;
+	/* margin-bottom: 0; */
+	padding-bottom: 0;
+}
+.parent-hover{visibility: hidden;}
+*:hover > .parent-hover{visibility: visible;}
+
+#topbar-dropmenu.alt.selected-heat{background:#fefefe;box-shadow:inset 0 0 3px #666}
