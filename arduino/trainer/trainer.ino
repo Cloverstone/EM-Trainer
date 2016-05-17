@@ -155,9 +155,18 @@ void loop() {
       stop();
       Serial.println("Previous");
       pull(previous(current));
-    }else if(inputString == "x"){
+    }else if(inputString.startsWith("x")){
       Serial.println("Step");
-      step(1);
+      int count = inputString.substring(1,inputString.length()).toInt();
+      if(count > 0){
+        for(int i = 0; i< count;i++){
+          step(1);
+          wait();
+        }
+        stop();
+      }else{
+        step(1);
+      }
     }else if(inputString == "f"){
       Serial.println("Running Forward...");
       direction = FORWARD;
