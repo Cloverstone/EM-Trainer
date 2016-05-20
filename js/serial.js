@@ -41,7 +41,7 @@ var onGetDevices = function(ports) {
   for (var i=0; i<ports.length; i++) {
     devices.push(ports[i].path);
   }
-  $().berry({legend:'Choose Device',fields:[{label: false, name: 'port', choices: devices }]}).on('save', function(){
+  $().berry({legend:'Choose Device',fields:[{label: false, name: 'port', choices: devices, type: 'radio' }]}).on('save', function(){
 		currentDevice = this.toJSON().port;
 		chrome.serial.connect(this.toJSON().port ,{},onConnect)
 		this.trigger('saved');
