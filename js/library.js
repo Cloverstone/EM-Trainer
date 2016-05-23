@@ -1,3 +1,6 @@
+var alert = function(text){
+console.log(text);
+}
 function render(template, data){
 	if(typeof templates[template] === 'undefined'){
 		templates[template] =  Hogan.compile($('#'+template).html());
