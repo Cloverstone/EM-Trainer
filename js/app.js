@@ -15,12 +15,12 @@ pages.home = {load: function(){
 	Mousetrap.bind('2', function() { sendCommand('on2'); });
 	Mousetrap.bind('2', function() { sendCommand('off2'); }, 'keyup');
 
-	Mousetrap.bind('3', function() { sendCommand('on1'); });
-	Mousetrap.bind('3', function() { sendCommand('off1'); }, 'keyup');
+	Mousetrap.bind('3', function() { sendCommand('on3'); });
+	Mousetrap.bind('3', function() { sendCommand('off3'); }, 'keyup');
 
 
-	Mousetrap.bind('4', function() { sendCommand('on1'); });
-	Mousetrap.bind('4', function() { sendCommand('off1'); }, 'keyup');
+	Mousetrap.bind('4', function() { sendCommand('on4'); });
+	Mousetrap.bind('4', function() { sendCommand('off4'); }, 'keyup');
 }}
 
 

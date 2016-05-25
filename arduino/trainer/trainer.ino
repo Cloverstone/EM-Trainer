@@ -4,16 +4,17 @@
 #define CoilBB 13
 #define FORWARD 1
 #define BACKWARD -1
-#define STOPPED 0
-
+#define STOPPED false
+#define RUNNING true
 #define DEFAULT_INTERVAL 15
 
+int coils[] = {CoilAA, CoilBA, CoilAB, CoilBB};
 String inputString = "";         // a string to hold incoming data
 bool stringComplete = false;  // whether the string is complete
 
 int interval = DEFAULT_INTERVAL;
 int current = CoilAA;
-//int moving = false;
+int action = STOPPED;
 int direction = FORWARD;
 bool halfStep;
 int next(int coil){
@@ -35,13 +36,13 @@ int position = 0;
 
 void step(int dir = direction){
   switch(position){
-    case 0:  
+    case 0: 
       digitalWrite(CoilBB, LOW);
       break;
-    case 1:  
+    case 1:
       digitalWrite(CoilBA, HIGH);
       break;
-    case 2: 
+    case 2:
       digitalWrite(CoilAA, LOW);
       break;
     case 3:  
@@ -93,7 +94,7 @@ void stop(){
     Serial.println("Stopped!");
     interval = DEFAULT_INTERVAL;
   }
-  direction = STOPPED;
+  action = STOPPED;
 }
 
 void setup() {
@@ -111,22 +112,23 @@ void setup() {
  
 
 void loop() {
-  
-  if(direction == FORWARD){
-    if(halfStep){
-      step();
-      wait();
-    }else{
-      pull(next(current));
+  if(action == RUNNING){
+    if(direction == FORWARD){
+      if(halfStep){
+        step();
+        wait();
+      }else{
+        pull(next(current));
+      }
     }
-  }
-
-  if(direction == BACKWARD){
-    if(halfStep){
-      step();
-      wait();
-    }else{
-      pull(previous(current));
+  
+    if(direction == BACKWARD){
+      if(halfStep){
+        step();
+        wait();
+      }else{
+        pull(previous(current));
+      }
     }
   }
 
@@ -173,15 +175,33 @@ void loop() {
     }else if(inputString == "h"){
       Serial.println("Half Step...");
       halfStep = !halfStep;
+    }else if(inputString == "half_step"){
+      Serial.println("Half Step...");
+      halfStep = true;
+    }else if(inputString == "full_step"){
+      Serial.println("Full Step...");
+      halfStep = false;
     }else if(inputString == "r"){
       Serial.println("Running Backward...");
       direction = BACKWARD;
+    }else if(inputString == "start"){
+      Serial.println("Running...");
+      action = RUNNING;
+    }else if(inputString == "stop"){
+      Serial.println("Stopped...");
+      action = STOPPED;
+    }else if(inputString.startsWith("on")){
+      Serial.println("New interval: "+inputString.substring(2,3));
+      digitalWrite(coils[inputString.substring(2,3).toInt()], HIGH);
+    }else if(inputString.startsWith("off")){
+      Serial.println("Coil: "+inputString.substring(3,4));
+      digitalWrite(coils[inputString.substring(3,4).toInt()], LOW);
     }else if(inputString.startsWith("i")){
       Serial.println("New interval: "+inputString.substring(1,4));
       interval = inputString.substring(1,4).toInt();
     }else if(inputString == "s"){
       if(interval<=10){
-        interval = interval - 1;;
+        interval = interval - 1;
       }else{
         interval = interval - 5;
       }
@@ -195,14 +215,6 @@ void loop() {
   }
 
 }
-//bool checkSerial(){
-//  bool result = inputString;
-//  if(stringComplete){
-//    inputString = "";
-//    stringComplete = false;
-//  }
-//  return result;
-//}
 void serialEvent() {
   while (Serial.available()) {
     // get the new byte:
