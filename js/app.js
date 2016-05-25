@@ -26,32 +26,10 @@ pages.home = {load: function(){
 
 
 pages.stepper = {load: function(){
-	// myRacers = new racerCollection();
-	// myRacers.fetch( { success: function() {
 		contentManager.show( new stepperView());	
-		$('.form').berry({actions:false,attributes:{interval: 15},fields:{
-				'interval': {choices: [3,4,5,6,7,8,9,10,15,100,200, 999], type: 'custom_select'}
-			}
-		}).delay('change:interval', function(){
-			// debugger;
-			console.log('i'+this.toJSON().interval+'\n');
-				chrome.serial.send(connectionId, convertStringToArrayBuffer('i'+this.toJSON().interval+'\n'), function(){})
-		})
-	// }});
 }}
 pages.speaker = {load: function(){
-	// myRacers = new racerCollection();
-	// myRacers.fetch( { success: function() {
 		contentManager.show( new speakerView());	
-		// $('.form').berry({actions:false,attributes:{interval: 15},fields:{
-		// 		'interval': {choices: [3,4,5,6,7,8,9,10,15,100,200, 999], type: 'custom_select'}
-		// 	}
-		// }).delay('change:interval', function(){
-		// 	// debugger;
-		// 	console.log('i'+this.toJSON().interval+'\n');
-		// 		chrome.serial.send(connectionId, convertStringToArrayBuffer('i'+this.toJSON().interval+'\n'), function(){})
-		// })
-	// }});
 }}
 
 

@@ -14,6 +14,7 @@ function render(template, data){
 // 		this.onClose();
 // 	}
 // };
+
 Backbone.View.prototype.form = function(options) {
 	options = options || {target: this.formTarget};
 	this.berry = $(this.formTarget || options.target).berry($.extend({model: this.model, legend: this.legend, fields: this.fields }, options));
@@ -198,11 +199,122 @@ loadPage = function(page, id) {
 
 Berry.options.modal = {header_class: 'bg-system'};
 // Convert string to ArrayBuffer
-var convertStringToArrayBuffer=function(str) {
-  var buf=new ArrayBuffer(str.length);
-  var bufView=new Uint8Array(buf);
-  for (var i=0; i<str.length; i++) {
-    bufView[i]=str.charCodeAt(i);
-  }
-  return buf;
+
+
+
+
+(function(b, $){
+	b.register({ type: 'switch',
+		defaults: {container: 'span'},
+		create: function() {
+			this.checkStatus(this.value);
+			return b.render('switch', this);
+		},
+		checkStatus: function(value){
+			if(value === true || value === "true" || value === 1 || value === "1" || value === "on" || value == this.truestate){
+				this.value = true;
+			}else{
+				this.value = false;
+			}
+		},
+		setup: function() {
+			this.$el = this.self.find('[type=checkbox]');
+			this.$el.off();
+			if(this.onchange !== undefined) {
+				this.on('change', this.onchange);
+			}
+			this.$el.change($.proxy(function(){this.trigger('change');},this));
+		},
+		getValue: function() {
+			if(this.$el.is(':checked')){
+				return this.truestate || true
+			}else{
+				return this.falsestate || false;
+			};
+		},
+		setValue: function(value) {
+			this.checkStatus(value);
+			this.$el.prop('checked', this.value);
+			this.value = value;
+		},
+		displayAs: function() {
+			for(var i in this.item.options) {
+				if(this.item.options[i].value == this.lastSaved) {
+					return this.item.options[i].name;
+				}
+			}
+		},
+		focus: function(){
+			this.$el.focus();
+		},
+		satisfied: function(){
+			return this.$el.is(':checked');
+		},
+	});
+})(Berry, jQuery);
+
+
+(function(b, $){
+
+
+
+
+	b.register({ type: 'slider',
+		// value: '',
+		create: function() {
+			this.options = b.processOpts.call(this.owner, this.item, this).options;
+			return b.render('slider', this);
+		},
+		setup: function() {
+			this.$el = this.self.find('input');
+
+			this.slider  = this.$el.slider({
+				tooltip_position:'bottom',
+				tooltip: 'always',
+				ticks: _.pluck(this.options, 'value'),
+				ticks_labels:_.pluck(this.options, 'label')
+			});
+    // {{#options.0}}data-slider-ticks="[{{#options}}{{value}},{{/options}}]"
+    // data-slider-ticks-labels="[{{#options}}'{{label}}',{{/options}}]"{{/options.0}}
+			this.$el.off();
+
+			this.setValue(this.value);
+			if(this.onchange !== undefined){
+				this.on('change', this.onchange);
+			}
+			this.$el.change($.proxy(function(){this.trigger('change');}, this));
+		},
+				setValue: function(value){
+			if(typeof this.lastSaved === 'undefined'){
+				this.lastSaved = value;
+			}
+			this.value = value;
+			this.slider.slider('setValue', this.value);
+			return this.$el;
+		},
+		getValue: function(){
+			return this.slider.slider('getValue');
+		},
+		displayAs: function() {
+			var o = this.options;
+			for(var i in o) {
+				if(o[i].value == this.lastSaved) {
+					return o[i].label;
+				}
+			}
+		}
+	});
+})(Berry, jQuery);
+
+
+convertStringToArrayBuffer = function(str) {
+	if(typeof str == 'string'){
+	  var buf=new ArrayBuffer(str.length);
+	  var bufView=new Uint8Array(buf);
+	  for (var i=0; i<str.length; i++) {
+	    bufView[i]=str.charCodeAt(i);
+	  }
+	  return buf;
+	}
+	return new ArrayBuffer(0);
 }

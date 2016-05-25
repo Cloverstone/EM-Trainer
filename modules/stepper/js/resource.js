@@ -34,11 +34,17 @@ stepperView = Backbone.View.extend({
 	// },
 	template: "stepper" ,
 	// childView: resultView,
-	// onShow: function(){
-	// 	this.collection.each(function(model) {
-	// 		new this.childView({'model': model});
-	// 	}, this);
-	// },
+	onShow: function(){
+				$('.form').berry({actions:false,attributes:{interval: 10},fields:{
+				'Interval': {min:3, max: 999, type: 'slider'},
+				'Half Step': {type: 'switch'}
+			}
+		}).delay('change:interval', function(){
+			console.log('i'+this.toJSON().interval+'\n');
+				chrome.serial.send(connectionId, convertStringToArrayBuffer('i'+this.toJSON().interval+'\n'), function(){})
+		})
+
+	},
 	initialize: function() {
 		this.setElement(render(this.template, {}));
 
