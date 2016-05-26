@@ -17,54 +17,64 @@ int current = CoilAA;
 int action = STOPPED;
 int direction = FORWARD;
 bool halfStep;
-int next(int coil){
-  if(coil == CoilAA){return CoilBA;}
-  if(coil == CoilBA){return CoilAB;}
-  if(coil == CoilAB){return CoilBB;}
-  if(coil == CoilBB){return CoilAA;}
-}
-
- 
-
-int previous(int coil){
-  if(coil == CoilAA){return CoilBB;}
-  if(coil == CoilBA){return CoilAA;}
-  if(coil == CoilAB){return CoilBA;}
-  if(coil == CoilBB){return CoilAB;}
-}
 int position = 0;
 
 void step(int dir = direction){
-  switch(position){
-    case 0: 
-      digitalWrite(CoilBB, LOW);
-      break;
-    case 1:
-      digitalWrite(CoilBA, HIGH);
-      break;
-    case 2:
-      digitalWrite(CoilAA, LOW);
-      break;
-    case 3:  
-      digitalWrite(CoilAB, HIGH);
-      break;
-    case 4: 
-      digitalWrite(CoilBA, LOW);
-      break;
-    case 5:  
-      digitalWrite(CoilBB, HIGH);
-      break;
-    case 6: 
-      digitalWrite(CoilAB, LOW);
-      break;
-    case 7:  
-      digitalWrite(CoilAA, HIGH);
-      break;
-  }  
-  
-  position  = position + dir;
-  if(position>7){position = 0;}
-  if(position<0){position = 7;}
+  if(!halfStep){
+    switch(position){
+      case 0: 
+        digitalWrite(CoilAA, HIGH);
+        digitalWrite(CoilBB, LOW);
+        break;
+      case 1:
+        digitalWrite(CoilBA, HIGH);
+        digitalWrite(CoilAA, LOW);
+        break;
+      case 2:
+        digitalWrite(CoilAB, HIGH);
+        digitalWrite(CoilBA, LOW);
+        break;
+      case 3:  
+        digitalWrite(CoilBB, HIGH);
+        digitalWrite(CoilAB, LOW);
+        break;
+    }  
+    
+    position  = position + dir;
+    if(position>3){position = 0;}
+    if(position<0){position = 3;}
+  }else{
+     switch(position){
+      case 0: 
+        digitalWrite(CoilBB, LOW);
+        break;
+      case 1:
+        digitalWrite(CoilBA, HIGH);
+        break;
+      case 2:
+        digitalWrite(CoilAA, LOW);
+        break;
+      case 3:  
+        digitalWrite(CoilAB, HIGH);
+        break;
+      case 4: 
+        digitalWrite(CoilBA, LOW);
+        break;
+      case 5:  
+        digitalWrite(CoilBB, HIGH);
+        break;
+      case 6: 
+        digitalWrite(CoilAB, LOW);
+        break;
+      case 7:  
+        digitalWrite(CoilAA, HIGH);
+        break;
+    }  
+    
+    position  = position + dir;
+    if(position>7){position = 0;}
+    if(position<0){position = 7;}
+  }
 }
 
 void reset(){
@@ -92,9 +102,10 @@ void pull(int coil){
 void stop(){
   if(direction != STOPPED){
     Serial.println("Stopped!");
-    interval = DEFAULT_INTERVAL;
+//    interval = DEFAULT_INTERVAL;
   }
   action = STOPPED;
+  reset();
 }
 
 void setup() {
@@ -113,68 +124,26 @@ void setup() {
 
 void loop() {
   if(action == RUNNING){
-    if(direction == FORWARD){
-      if(halfStep){
         step();
         wait();
-      }else{
-        pull(next(current));
-      }
-    }
-  
-    if(direction == BACKWARD){
-      if(halfStep){
-        step();
-        wait();
-      }else{
-        pull(previous(current));
-      }
-    }
   }
 
   if (stringComplete) {
-    if(inputString == "a"){
-      stop();
-      Serial.println("AA");
-      pull(CoilAA);
-    }else if(inputString == "b"){
-      stop();
-      Serial.println("BA");
-      pull(CoilBA);
-    }else if(inputString == "c"){
-      stop();
-      Serial.println("AB");
-      pull(CoilAB);
-    }else if(inputString == "d"){
-      stop();
-      Serial.println("BB");
-      pull(CoilBB);
-    }else if(inputString == "n"){
-      stop();
-      Serial.println("Next");
-      pull(next(current));
-    }else if(inputString == "p"){
-      stop();
-      Serial.println("Previous");
-      pull(previous(current));
-    }else if(inputString.startsWith("x")){
+    if(inputString.startsWith("x")){
       Serial.println("Step");
       int count = inputString.substring(1,inputString.length()).toInt();
       if(count > 0){
         for(int i = 0; i< count;i++){
-          step(1);
+          step();
           wait();
         }
         stop();
       }else{
-        step(1);
+        step();
       }
     }else if(inputString == "f"){
       Serial.println("Running Forward...");
       direction = FORWARD;
-    }else if(inputString == "h"){
-      Serial.println("Half Step...");
-      halfStep = !halfStep;
     }else if(inputString == "half_step"){
       Serial.println("Half Step...");
       halfStep = true;
@@ -188,14 +157,14 @@ void loop() {
       Serial.println("Running...");
       action = RUNNING;
     }else if(inputString == "stop"){
-      Serial.println("Stopped...");
-      action = STOPPED;
+
+      stop();
     }else if(inputString.startsWith("on")){
-      Serial.println("New interval: "+inputString.substring(2,3));
-      digitalWrite(coils[inputString.substring(2,3).toInt()], HIGH);
+      Serial.println("Coil: "+inputString.substring(2,3));
+      digitalWrite(coils[inputString.substring(2,3).toInt()-1], HIGH);
     }else if(inputString.startsWith("off")){
       Serial.println("Coil: "+inputString.substring(3,4));
-      digitalWrite(coils[inputString.substring(3,4).toInt()], LOW);
+      digitalWrite(coils[inputString.substring(3,4).toInt()-1], LOW);
     }else if(inputString.startsWith("i")){
       Serial.println("New interval: "+inputString.substring(1,4));
       interval = inputString.substring(1,4).toInt();

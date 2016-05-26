@@ -36,7 +36,7 @@ stepperView = Backbone.View.extend({
 	// childView: resultView,
 	onShow: function(){
 				$('.form').berry({actions:false,attributes: {interval: 10},fields:{
-				'Interval': {min:3, max: 999, type: 'range'},
+				'Interval': {choices:[10, 20, 50, 100, 250, 500, 999], type: 'slider'},
 				'Half Step': {type: 'switch'},
 				'Direction': {type: 'switch'}
 			}
@@ -44,15 +44,16 @@ stepperView = Backbone.View.extend({
 			sendCommand('i'+this.toJSON().interval + '\n');
 		}).delay('change:half_step', function(){
 			if(this.toJSON().half_step) {
-				sendCommand('helf_step\n');
+				sendCommand('half_step');
 			}else{
-				sendCommand('full_step\n');
+				sendCommand('full_step');
 			}
 		}).delay('change:direction', function(){
-			if(this.toJSON().half_step){
-				sendCommand('f\n');
+			debugger;
+			if(this.toJSON().direction){
+				sendCommand('f');
 			}else{
-				sendCommand('r\n');
+				sendCommand('r');
 			}
 		})
 	},
