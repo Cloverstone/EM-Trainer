@@ -8,6 +8,9 @@
 #define RUNNING true
 #define DEFAULT_INTERVAL 15
 
+#include "pitches.h"
+#include "songs.h"
+
 int coils[] = {CoilAA, CoilBA, CoilAB, CoilBB};
 String inputString = "";         // a string to hold incoming data
 bool stringComplete = false;  // whether the string is complete
@@ -77,8 +80,29 @@ void step(int dir = direction){
   }
 }
 
+void play(int melody[], int pace, int noteDurations[]){
+  int size = sizeof(melody) / sizeof(int);
+   for (int thisNote = 0; thisNote < size; thisNote++) {
+    if(action == RUNNING){
+      // to calculate the note duration, take one second
+      // divided by the note type.
+      //e.g. quarter note = 1000 / 4, eighth note = 1000/8, etc.
+      int noteDuration = pace / noteDurations[thisNote];
+      tone(CoilAA, melody[thisNote], noteDuration);
+  
+      // to distinguish the notes, set a minimum time between them.
+      // the note's duration + 30% seems to work well:
+      int pauseBetweenNotes = noteDuration * 1.30;
+      delay(pauseBetweenNotes);
+      // stop the tone playing:
+      noTone(CoilAA);
+    }else{
+      break;
+    }
+  } 
+}
 void reset(){
-  Serial.println("Reset");
+//  Serial.println("Reset");
   digitalWrite(CoilAA, LOW);
   digitalWrite(CoilAB, LOW);
   digitalWrite(CoilBA, LOW);
@@ -92,18 +116,7 @@ void wait(){
   }
 }
 
-void pull(int coil){
-  current = coil;
-  digitalWrite(current, HIGH);
-  wait();
-  digitalWrite(current, LOW);
-};
-
 void stop(){
-  if(direction != STOPPED){
-    Serial.println("Stopped!");
-//    interval = DEFAULT_INTERVAL;
-  }
   action = STOPPED;
   reset();
 }
@@ -118,6 +131,13 @@ void setup() {
   pinMode(CoilBB, OUTPUT);      // sets the digital pin as output
 }
 
+void status(){  
+  Serial.println("{\"interval\":"+String(interval)
+  +",\"direction\":"+String(direction)
+  +",\"half_step\":"+String(halfStep)
+  +",\"state\":"+String(action)
+  +",\"coils\":[{\"status\":"+digitalRead(CoilAA)+"},{\"status\":"+digitalRead(CoilBA)+"},{\"status\":"+digitalRead(CoilAB)+"},{\"status\":"+digitalRead(CoilBB)+"}]}");
+}
  
 
  
@@ -130,7 +150,6 @@ void loop() {
 
   if (stringComplete) {
     if(inputString.startsWith("x")){
-      Serial.println("Step");
       int count = inputString.substring(1,inputString.length()).toInt();
       if(count > 0){
         for(int i = 0; i< count;i++){
@@ -142,43 +161,53 @@ void loop() {
         step();
       }
     }else if(inputString == "f"){
-      Serial.println("Running Forward...");
       direction = FORWARD;
     }else if(inputString == "half_step"){
-      Serial.println("Half Step...");
-      halfStep = true;
+      halfStep = true;  
+    }else if(inputString == "status"){
     }else if(inputString == "full_step"){
-      Serial.println("Full Step...");
       halfStep = false;
     }else if(inputString == "r"){
-      Serial.println("Running Backward...");
       direction = BACKWARD;
     }else if(inputString == "start"){
-      Serial.println("Running...");
       action = RUNNING;
     }else if(inputString == "stop"){
-
       stop();
     }else if(inputString.startsWith("on")){
-      Serial.println("Coil: "+inputString.substring(2,3));
       digitalWrite(coils[inputString.substring(2,3).toInt()-1], HIGH);
     }else if(inputString.startsWith("off")){
-      Serial.println("Coil: "+inputString.substring(3,4));
       digitalWrite(coils[inputString.substring(3,4).toInt()-1], LOW);
     }else if(inputString.startsWith("i")){
-      Serial.println("New interval: "+inputString.substring(1,4));
       interval = inputString.substring(1,4).toInt();
-    }else if(inputString == "s"){
-      if(interval<=10){
-        interval = interval - 1;
-      }else{
-        interval = interval - 5;
+    }else if(inputString.startsWith("play")){
+      
+      action = RUNNING;
+      int song = inputString.substring(5,6).toInt();
+      //quick and dirty figure out how to do this better on arduino
+      switch(song){
+        case 1:
+          play(melody, pace, noteDurations);
+          break;
+        case 2:
+          play(melody1, pace1, noteDurations1);
+          break;
+        case 3:
+          play(melody2, pace1, noteDurations2);
+          break;
+        case 4:
+          play(melody3, pace1, noteDurations3);
+          break;
+        case 5:
+          play(melody4, pace1, noteDurations4);
+          break;
       }
-      Serial.println("New interval: "+String(interval));
+      
+      action = STOPPED;
     }else{
       stop();
       reset();
     }
+    status();
     inputString = "";
     stringComplete = false;
   }

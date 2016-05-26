@@ -42,14 +42,13 @@ stepperView = Backbone.View.extend({
 			}
 		}).delay('change:interval', function(){
 			sendCommand('i'+this.toJSON().interval + '\n');
-		}).delay('change:half_step', function(){
+		}).on('change:half_step', function(){
 			if(this.toJSON().half_step) {
 				sendCommand('half_step');
 			}else{
 				sendCommand('full_step');
 			}
-		}).delay('change:direction', function(){
-			debugger;
+		}).on('change:direction', function(){
 			if(this.toJSON().direction){
 				sendCommand('f');
 			}else{

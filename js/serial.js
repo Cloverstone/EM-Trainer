@@ -6,13 +6,16 @@ liveView = Backbone.View.extend({
 });
 
 processString = function(results) {
- $('.sidebar-left-content').html('<center><h1>'+results+'</h1></center>');
+  $('.sidebar-left-content').html(render('side', JSON.parse(results) ));
+ //$('.sidebar-left-content').html('<center><h1>'+results+'</h1></center>');
 }
 
 var onConnect = function(connectionInfo) {
    // The serial port has been opened. Save its id to use later.
   connectionId = connectionInfo.connectionId;
   // Do whatever you need to do with the opened port.
+  
+      sendCommand('status');
 }
 
 var stringReceived = '';
@@ -37,14 +40,25 @@ chrome.serial.onReceive.addListener(onReceiveCallback);
 devices = [];
 currentDevice = null;
 var onGetDevices = function(ports) {
-	devices = []
+	devices = ['NONE'];
   for (var i=0; i<ports.length; i++) {
     devices.push(ports[i].path);
   }
-  $().berry({legend:'Choose Device',fields:[{label: false, name: 'port', choices: devices, type: 'radio' }]}).on('save', function(){
-		currentDevice = this.toJSON().port;
-		chrome.serial.connect(this.toJSON().port ,{},onConnect)
-		this.trigger('saved');
+  // $().berry({legend:'Choose Device',fields:[{label: false, name: 'port', choices: devices, type: 'radio' }]}).on('save', function(){
+		// currentDevice = this.toJSON().port;
+		// chrome.serial.connect(this.toJSON().port ,{},onConnect)
+  //   sendCommand('status');
+		// this.trigger('saved');
+  // })
+  $('#topbar').berry({actions:false, fields:[{label: false, name: 'port', choices: devices, type: 'select' }]}).on('change', function(){
+    currentDevice = this.toJSON().port;
+    debugger;
+    if(currentDevice !== 'NONE'){
+      chrome.serial.connect(this.toJSON().port ,{},onConnect)
+    }else{
+          chrome.serial.disconnect(connectionId, function(){});
+    }
+    this.trigger('saved');
   })
 }
 chrome.serial.getDevices(onGetDevices);

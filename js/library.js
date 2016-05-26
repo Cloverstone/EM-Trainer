@@ -1,5 +1,8 @@
+var debug = false;
 var alert = function(text){
-console.log(text);
+	if(debug){
+		console.log(text);
+	}
 }
 function render(template, data){
 	if(typeof templates[template] === 'undefined'){

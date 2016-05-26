@@ -1,0 +1,23 @@
+<div class="container" style="width:200px">
+	<div class="row">
+		<div class="col-sm-12">Interval:{{interval}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">Direction:{{direction}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">State:{{state}}</div>
+	</div>
+	<div class="row">
+		<div class="col-sm-12">Half Step:{{half_step}}</div>
+	</div>
+	<div class="row">
+
+{{#coils}}
+	<span style="font-size: 50px;padding: 20px;" class="col-sm-6 glyphicon glyphicon-record text-{{#status}}success{{/status}}{{^status}}muted{{/status}}"></span>
+{{/coils}}
+</div>
+<style>
+.row .glyphicon-record:nth-child(3){float:right;}
+</style>
+</div>

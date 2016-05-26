@@ -1,8 +1,18 @@
 contentManager = new RegionManager();
 // sidebarManager = new RegionManager({el: '#sidebar_left'});
 //menuManager = new RegionManager({el: '#menu'});
+
+// var background = chrome.extension.getBackgroundPage();
+
+addEventListener("unload", function (event) {
+    // background.console.log(event.type);
+    chrome.serial.disconnect(connectionId, function(){});
+}, true);
+
+
 sidebarManager = new RegionManager({el: '#sidebar'});
 var sendCommand = function(command){
+	stringReceived = "";
 		chrome.serial.send(connectionId, convertStringToArrayBuffer(command+'\n'), function(){})
 }
 
