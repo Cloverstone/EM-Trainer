@@ -20,7 +20,7 @@ speakerView = Backbone.View.extend({
 	onShow: function(){
 				$('.form').berry({actions:['play', ''] ,attributes: {interval: 10},fields:{
 				'Coil': {min:1, max:4, type: 'custom_radio', value: 1},
-				'Song': {required: true, options:[{label: 'Mario', value: 0}, {label:' Mario UnderWorld', value: 1}, {label: 'Shave and a Haircut', value: 2}, {label:'Bond', value: 0},{label: 'Mukkathe Penne', value: 0} ], value_key: 'index', type: 'custom_radio'},
+				'Song': {required: true, options:[{label: 'Mario', value: 3}, {label:' Mario UnderWorld', value: 4}, {label: 'Shave and a Haircut', value: 2}, {label:'Bond', value: 1}/*,{label: 'Mukkathe Penne', value: 5}*/ ], value_key: 'index', type: 'custom_radio'},
 
 			}
 		}).on('save', function(){

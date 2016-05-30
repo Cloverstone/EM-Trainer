@@ -28,6 +28,19 @@
 // 		this.autoElement();
 // 	}
 // });
+
+Berry.btn.update = {
+		label: 'Update',
+		icon:'check',
+		id: 'berry-submit',
+		modifier: 'success col-sm-offset-4',
+		click: function() {
+			if(this.options.autoDestroy) {
+				this.on('saved', this.destroy);
+			}
+			this.trigger('save');
+		}
+	};
 stepperView = Backbone.View.extend({
 	// events: {
 	// 	'click #new-meet': 'add'
@@ -35,10 +48,11 @@ stepperView = Backbone.View.extend({
 	template: "stepper" ,
 	// childView: resultView,
 	onShow: function(){
-				$('.form').berry({actions:false,attributes: {interval: 10},fields:{
-				'Interval': {choices:[10, 20, 50, 100, 250, 500, 999], type: 'slider'},
+				$('.form').berry({actions:['update',''],attributes: {interval: 10},fields:{
+				'Interval': {choices:[10, 999], type: 'slider'},
 				'Half Step': {type: 'switch'},
-				'Direction': {type: 'switch'}
+				'Direction': {type: 'switch'},
+				'Steps': {type: 'number'}
 			}
 		}).delay('change:interval', function(){
 			sendCommand('i'+this.toJSON().interval + '\n');
@@ -54,6 +68,8 @@ stepperView = Backbone.View.extend({
 			}else{
 				sendCommand('r');
 			}
+		}).on('save', function(){
+				sendCommand('x'+this.toJSON().steps);
 		})
 	},
 	initialize: function() {

@@ -30,6 +30,7 @@ pages.home = {load: function(){
 
 
 	Mousetrap.bind('4', function() { sendCommand('on4'); });
+	Mousetrap.bind('9', function() { sendCommand('on4'); });
 	Mousetrap.bind('4', function() { sendCommand('off4'); }, 'keyup');
 
 	Mousetrap.bind('0', function() { chrome.serial.disconnect(connectionId, function (){

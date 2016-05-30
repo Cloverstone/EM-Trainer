@@ -3,8 +3,8 @@
 
 
 //bond
-int pace = 1450; // change pace of music("speedy")
-int melody[] = {
+int pace0 = 1450; // change pace of music("speedy")
+int melody0[] = {
   /*NOTE_G4,NOTE_G4,NO_SOUND,NOTE_G4,NOTE_G4,NO_SOUND,NOTE_G4,NOTE_G4,NOTE_G4,NOTE_G4,NOTE_G4,
    NOTE_B3,NOTE_G3,NOTE_C4,NOTE_G3,NOTE_CS4,NOTE_G3,NOTE_C4,NOTE_G3,NOTE_B3,NOTE_G3,NOTE_C4,NOTE_G3,NOTE_CS4,NOTE_G3,NOTE_C4,NOTE_G3,
    NOTE_E4,NOTE_F4,NOTE_F4,NOTE_F4,NOTE_F4,NOTE_E4,NOTE_E4,NOTE_E4,
@@ -21,7 +21,7 @@ int melody[] = {
 };
 
 // note duration: 1 = whole note, 2 = half note, 4 = quarter note, 8 = eighth note, etc.
-int noteDurations[] = {
+int noteDurations0[] = {
   /*8,8,2,8,8,2,16,8,16,8,8,
    2,4,2,4,2,4,2,4,2,4,2,4,2,4,2,4,
    8,16,16,8,4,8,8,8,
@@ -157,60 +157,60 @@ int noteDurations3[] = {
 
 
 //// notes in the song 'Mukkathe Penne'
-int melody4[] = {
-  NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
-  NOTE_G4, NOTE_C5, NOTE_AS4, NOTE_A4,                   
-  NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
-  NOTE_C4, NOTE_D4,0,                                 
-  
-  NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
-  NOTE_G4, NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4,      //29               //8
-  NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
-  NOTE_C4, NOTE_D4,0,                                       
-  
-  NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
-  NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5,
-  NOTE_C4, NOTE_D4, NOTE_DS4, NOTE_FS4, NOTE_D5, NOTE_C5,
-  NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_AS4,             //58
-  
-  NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
-  NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_G4,
-  NOTE_A4, 0, NOTE_AS4, NOTE_A4, 0, NOTE_G4,
-  NOTE_G4, NOTE_A4, NOTE_G4, NOTE_FS4, 0,
-  
-  NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
-  NOTE_C4, NOTE_D4, 0,
-  NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
-  NOTE_C4, NOTE_D4
-  
-};
+//int melody4[] = {
+//  NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
+//  NOTE_G4, NOTE_C5, NOTE_AS4, NOTE_A4,                   
+//  NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
+//  NOTE_C4, NOTE_D4,0,                                 
+//  
+//  NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_A4,
+//  NOTE_G4, NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4,      //29               //8
+//  NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_FS4, NOTE_DS4, NOTE_D4,
+//  NOTE_C4, NOTE_D4,0,                                       
+//  
+//  NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
+//  NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5,
+//  NOTE_C4, NOTE_D4, NOTE_DS4, NOTE_FS4, NOTE_D5, NOTE_C5,
+//  NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_AS4,             //58
+//  
+//  NOTE_D4, NOTE_FS4, NOTE_G4, NOTE_A4, NOTE_DS5, NOTE_D5,
+//  NOTE_C5, NOTE_D5, NOTE_C5, NOTE_AS4, NOTE_C5, NOTE_AS4, NOTE_A4, NOTE_C5, NOTE_G4,
+//  NOTE_A4, 0, NOTE_AS4, NOTE_A4, 0, NOTE_G4,
+//  NOTE_G4, NOTE_A4, NOTE_G4, NOTE_FS4, 0,
+//  
+//  NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
+//  NOTE_C4, NOTE_D4, 0,
+//  NOTE_C4, NOTE_D4, NOTE_G4, NOTE_FS4, NOTE_DS4,
+//  NOTE_C4, NOTE_D4
+//  
+//};
 //
 //// note durations: 8 = quarter note, 4 = 8th note, etc.
-int noteDurations4[] = {       //duration of the notes
-  8,4,8,4,
-  4,4,4,12,
-  4,4,4,4,4,4,
-  4,16,4,
-  
-  8,4,8,4,
-  4,2,1,1,2,1,1,12,
-  4,4,4,4,4,4,
-  4,16,4,
-  
-  4,4,4,4,4,4,
-  4,4,4,12,
-  4,4,4,4,4,4,
-  4,4,4,12,
-  
-  4,4,4,4,4,4,
-  2,1,1,2,1,1,4,8,4,
-  2,6,4,2,6,4,
-  2,1,1,16,4,
-  
-  4,8,4,4,4,
-  4,16,4,
-  4,8,4,4,4,
-  4,20,
-};
-
+//int noteDurations4[] = {       //duration of the notes
+//  8,4,8,4,
+//  4,4,4,12,
+//  4,4,4,4,4,4,
+//  4,16,4,
+//  
+//  8,4,8,4,
+//  4,2,1,1,2,1,1,12,
+//  4,4,4,4,4,4,
+//  4,16,4,
+//  
+//  4,4,4,4,4,4,
+//  4,4,4,12,
+//  4,4,4,4,4,4,
+//  4,4,4,12,
+//  
+//  4,4,4,4,4,4,
+//  2,1,1,2,1,1,4,8,4,
+//  2,6,4,2,6,4,
+//  2,1,1,16,4,
+//  
+//  4,8,4,4,4,
+//  4,16,4,
+//  4,8,4,4,4,
+//  4,20,
+//};
+//
 
