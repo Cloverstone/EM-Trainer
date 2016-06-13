@@ -2,6 +2,7 @@
 #define CoilAB 11
 #define CoilBA 12
 #define CoilBB 13
+#define HallEffect A0
 #define FORWARD 1
 #define BACKWARD -1
 #define STOPPED false
@@ -132,6 +133,8 @@ void setup() {
   pinMode(CoilAB, OUTPUT);      // sets the digital pin as output
   pinMode(CoilBA, OUTPUT);      // sets the digital pin as output
   pinMode(CoilBB, OUTPUT);      // sets the digital pin as output
+  pinMode(HallEffect, INPUT);      // sets the digital pin as output
+
 }
 
 void status(){  
@@ -139,6 +142,7 @@ void status(){
   +",\"direction\":"+String(direction)
   +",\"half_step\":"+String(halfStep)
   +",\"state\":"+String(action)
+  +",\"reading\":"+String(analogRead(HallEffect))
   +",\"coils\":[{\"status\":"+String(digitalRead(CoilAA))+"},{\"status\":"+String(digitalRead(CoilBA))+"},{\"status\":"+String(digitalRead(CoilAB))+"},{\"status\":"+String(digitalRead(CoilBB))+"}]}");
 }
  

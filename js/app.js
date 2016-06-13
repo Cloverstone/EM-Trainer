@@ -51,9 +51,21 @@ pages.stepper = {load: function(){
 pages.speaker = {load: function(){
 		contentManager.show( new speakerView());	
 }}
+pages.solenoid = {load: function(){
+		contentManager.show( new solenoidView());	
+}}
+pages.meter = {load: function(){
+		contentManager.show( new meterView());	
+}}
+
+pages.brushed = {load: function(){
+		contentManager.show( new brushedView());	
+}}
 
 
-
+pages.relay = {load: function(){
+		contentManager.show( new relayView());	
+}}
 
 
 mainView = Backbone.View.extend({
