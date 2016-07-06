@@ -67,6 +67,10 @@ pages.relay = {load: function(){
 		contentManager.show( new relayView());	
 }}
 
+pages.dash = {load: function(){
+		contentManager.show( new dashView());	
+}}
+
 
 mainView = Backbone.View.extend({
 	// events: {

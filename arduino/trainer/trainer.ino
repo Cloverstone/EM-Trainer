@@ -2,6 +2,7 @@
 #define CoilAB 11
 #define CoilBA 12
 #define CoilBB 13
+#define Power 9
 #define HallEffect A0
 #define FORWARD 1
 #define BACKWARD -1
@@ -180,7 +181,9 @@ void loop() {
       mode = 0;
       action = RUNNING;
     }else if(inputString == "stop"){
-      stop();
+      stop(); 
+    }else if(inputString.startsWith("power")){
+      analogWrite(Power, coils[inputString.substring(5,8).toInt()-1]);
     }else if(inputString.startsWith("on")){
       digitalWrite(coils[inputString.substring(2,3).toInt()-1], HIGH);
     }else if(inputString.startsWith("off")){
