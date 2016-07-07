@@ -1,0 +1,1187 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node',
+1 verbose cli   '/usr/local/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'grunt-hogan' ]
+2 info using npm@2.14.7
+3 info using node@v4.2.2
+4 verbose install initial load of /Users/adamsmallcomb/Projects/EM-Trainer/package.json
+5 verbose installManyTop reading scoped package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt/package.json
+6 verbose installManyTop reading scoped package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-contrib-watch/package.json
+7 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/package.json
+8 silly cache add args [ 'grunt-hogan', null ]
+9 verbose cache add spec grunt-hogan
+10 silly cache add parsed spec Result {
+10 silly cache add   raw: 'grunt-hogan',
+10 silly cache add   scope: null,
+10 silly cache add   name: 'grunt-hogan',
+10 silly cache add   rawSpec: '',
+10 silly cache add   spec: '*',
+10 silly cache add   type: 'range' }
+11 silly addNamed grunt-hogan@*
+12 verbose addNamed "*" is a valid semver range for grunt-hogan
+13 silly addNameRange { name: 'grunt-hogan', range: '*', hasData: false }
+14 silly mapToRegistry name grunt-hogan
+15 silly mapToRegistry using default registry
+16 silly mapToRegistry registry https://registry.npmjs.org/
+17 silly mapToRegistry uri https://registry.npmjs.org/grunt-hogan
+18 verbose addNameRange registry:https://registry.npmjs.org/grunt-hogan not in flight; fetching
+19 verbose request uri https://registry.npmjs.org/grunt-hogan
+20 verbose request no auth needed
+21 info attempt registry request try #1 at 8:12:25 PM
+22 verbose request id f75ff111de576889
+23 verbose etag "7SI8RC7SI0C0TFX2G2TY1EKRY"
+24 http request GET https://registry.npmjs.org/grunt-hogan
+25 http 304 https://registry.npmjs.org/grunt-hogan
+26 verbose headers { date: 'Sat, 28 May 2016 00:12:20 GMT',
+26 verbose headers   via: '1.1 varnish',
+26 verbose headers   'cache-control': 'max-age=300',
+26 verbose headers   etag: '"7SI8RC7SI0C0TFX2G2TY1EKRY"',
+26 verbose headers   age: '0',
+26 verbose headers   connection: 'keep-alive',
+26 verbose headers   'x-served-by': 'cache-ord1736-ORD',
+26 verbose headers   'x-cache': 'MISS',
+26 verbose headers   'x-cache-hits': '0',
+26 verbose headers   'x-timer': 'S1464394340.180359,VS0,VE137',
+26 verbose headers   vary: 'Accept-Encoding' }
+27 silly get cb [ 304,
+27 silly get   { date: 'Sat, 28 May 2016 00:12:20 GMT',
+27 silly get     via: '1.1 varnish',
+27 silly get     'cache-control': 'max-age=300',
+27 silly get     etag: '"7SI8RC7SI0C0TFX2G2TY1EKRY"',
+27 silly get     age: '0',
+27 silly get     connection: 'keep-alive',
+27 silly get     'x-served-by': 'cache-ord1736-ORD',
+27 silly get     'x-cache': 'MISS',
+27 silly get     'x-cache-hits': '0',
+27 silly get     'x-timer': 'S1464394340.180359,VS0,VE137',
+27 silly get     vary: 'Accept-Encoding' } ]
+28 verbose etag https://registry.npmjs.org/grunt-hogan from cache
+29 verbose get saving grunt-hogan to /Users/adamsmallcomb/.npm/registry.npmjs.org/grunt-hogan/.cache.json
+30 silly addNameRange number 2 { name: 'grunt-hogan', range: '*', hasData: true }
+31 silly addNameRange versions [ 'grunt-hogan',
+31 silly addNameRange   [ '0.1.0',
+31 silly addNameRange     '0.1.0-1',
+31 silly addNameRange     '0.1.0-2',
+31 silly addNameRange     '0.1.0-3',
+31 silly addNameRange     '0.1.0-4',
+31 silly addNameRange     '0.1.1-0',
+31 silly addNameRange     '0.1.1-1',
+31 silly addNameRange     '0.1.1-2',
+31 silly addNameRange     '0.1.1-3',
+31 silly addNameRange     '0.1.1-4',
+31 silly addNameRange     '0.2.0',
+31 silly addNameRange     '0.2.0-1',
+31 silly addNameRange     '0.2.1-0',
+31 silly addNameRange     '0.2.2-0',
+31 silly addNameRange     '0.2.2-1',
+31 silly addNameRange     '0.2.2-2',
+31 silly addNameRange     '0.3.0' ] ]
+32 silly addNamed grunt-hogan@0.3.0
+33 verbose addNamed "0.3.0" is a plain semver version for grunt-hogan
+34 silly cache afterAdd grunt-hogan@0.3.0
+35 verbose afterAdd /Users/adamsmallcomb/.npm/grunt-hogan/0.3.0/package/package.json not in flight; writing
+36 verbose afterAdd /Users/adamsmallcomb/.npm/grunt-hogan/0.3.0/package/package.json written
+37 silly install resolved [ { name: 'grunt-hogan',
+37 silly install resolved     description: 'a grunt task to compile/precompile hogan templates',
+37 silly install resolved     version: '0.3.0',
+37 silly install resolved     homepage: 'https://github.com/automatonic/grunt-hogan',
+37 silly install resolved     author:
+37 silly install resolved      { name: 'Elliott B. Edwards',
+37 silly install resolved        email: 'elliott@automatonic.net',
+37 silly install resolved        url: 'http://automatonic.net' },
+37 silly install resolved     repository:
+37 silly install resolved      { type: 'git',
+37 silly install resolved        url: 'git://github.com/automatonic/grunt-hogan.git' },
+37 silly install resolved     bugs: { url: 'https://github.com/automatonic/grunt-hogan/issues' },
+37 silly install resolved     licenses: [ [Object] ],
+37 silly install resolved     main: 'grunt.js',
+37 silly install resolved     bin: { 'grunt-hogan': 'bin/grunt-hogan' },
+37 silly install resolved     engines: { node: '>= 0.8.0' },
+37 silly install resolved     scripts: { test: 'grunt test' },
+37 silly install resolved     dependencies: { 'hogan.js': '^3.0.2', lodash: '^2.4.1', underscore: '~1.4.4' },
+37 silly install resolved     devDependencies:
+37 silly install resolved      { grunt: '~0.4.5',
+37 silly install resolved        'grunt-contrib-jshint': '^0.9.2',
+37 silly install resolved        'grunt-shell': '^0.7.0' },
+37 silly install resolved     peerDependencies: { grunt: '~0.4.5' },
+37 silly install resolved     keywords: [ 'gruntplugin', 'hogan.js', 'template', 'mustache', 'templating' ],
+37 silly install resolved     readme: '# grunt-hogan\n\na [grunt](http://gruntjs.com) task to precompile [mustache](http://mustache.github.io/) templates with [hogan.js](http://twitter.github.io/hogan.js/) \n\n[![Build status](https://ci.appveyor.com/api/projects/status/7sl7shna3qi0uo74)](https://ci.appveyor.com/project/automatonic/grunt-hogan)\n\n## Getting Started\n\n> NOTE: This documentation is for grunt version 0.4+. To work with version 0.3.x, see [here](https://github.com/automatonic/grunt-hogan/blob/grunt-0.3/README.md)\n\nInstall this grunt plugin next to your project\'s [Gruntfile.js][getting_started] with: `npm install grunt-hogan --save-dev`\n\nThen add this line to your project\'s `Gruntfile.js`:\n\n```javascript\ngrunt.loadNpmTasks(\'grunt-hogan\');\n```\n\n`grunt-hogan` now uses standard [grunt file directives](http://gruntjs.com/configuring-tasks#files) for inputs and outputs.\n\nTo precompile a single `src` template into a single `dest` module:\n\n```javascript\ngrunt.initConfig({\n    //...\n    hogan: {\n        //desired target name\n        mytarget : {\n          //path to input template\n          src : \'view/chair.hogan\',\n          //output path, relative to Gruntfile.js\n          dest : \'bandanna.js\'\n        }\n    },\n    //...\n});\n```\n\n###Multiple input templates via patterns\n\n```javascript\ngrunt.initConfig({\n    //...\n    hogan: {\n        //desired target name\n        mytarget : {\n          //Wildcard of desired templates\n          src : \'view/**/*.hogan\',\n          //output destination\n          dest : \'hulkingup.js\'\n        }\n    },\n    //...\n});\n```\n\n###Multiple input template patterns\n\n```javascript\n//...\nmytarget : {\n    //...\n    src : [\'view/wwf/*.hogan\', \'view/wcw/*.hogan\'],\n    //...\n}\n//...\n```\n\n##Options\n\n`grunt-hogan` has been updated to support grunt\'s\n[task- and target-specific options](http://gruntjs.com/configuring-tasks#options).\nIn this way you can DRY out your template tasks.\n\n##"Binders"\n\nA single target can compile multiple hogan templates into a single file. The active "binder" is\nresponsible for deciding how to join things together and what conventions/formats to use.\n\nIn general, most binders will result in a file containing a Javascript module, but this is customizable.\n\nIf a binder is not explicitly specified, the "default" binder will be used. \nThe "default" binder generates a javascript file\nthat is designed to work both as a node.js module and in the browser via a \n`<script/>` tag. Other built-in binders are:\n\n  * "hulk" - outputs results similar to hogan\'s "hulk" command line tool...which is "vanilla" javascript\n  * "nodejs" - exposes compiled templates as a node.js module\n  * "amd" - exposes compiled templates in amd format\n  * "revealing" - exposes compile templates via the revealing module pattern \n\nYou can also create your own binders. See the "Custom Binders" section below. If you think a binder is\nparticularly useful and want it to become "built-in", feel free to send a pull request.\n\nTo specify a binder, use the "binderName" option:\n\n```javascript\n//...\nmytarget : {\n    src : \'view/**/*.hogan\',\n    dest : \'hulkingup.js\',\n    options : { binderName: \'hulk\' }\n}\n//...\n```\n###Custom Binders\n\nCustom binders start life as a binder template that is compiled with the "bootstrap" binder into a node.js style javascript module.\n`grunt-hogan` simply expects to be able to `require(...)` the module and access\na `templates` attribute that is an associative array from `[binderName]` to `Hogan.Template` instance.\n\n####Creating Custom Binders\n\nSee the `custombinder` and `twocustombinders` targets in the \n[example custombinder gruntfile](example/Gruntfile.custombinder.js) \nfor futher detail on creating and using custom binders.\n\n\n####Using Custom Binders\nTo use a *custom* binder, set the "binderPath" attribute to the desired javascript file:\n\n```javascript\n//...\noptions: {\n  binderPath : __dirname + \'/my/custom/binders.js\',\n  binderName : \'mybinder\'\n}\n//...\n```\n\nIf `binderName` is unspecified, then the first binder in the module will be used (useful if you only have a single binder in your module): \n\n\n```javascript\n//...\noptions: {\n  binderPath : __dirname + \'/my/custom/binders.js\'\n}\n//...\n```\n\n###Using precompiled templates\n\nAs of version 0.2.2, all built in binders create javascript that functions similarly in intention, but varies with respect to the target use.\n\nGiven a precompile task like:\n\n```javascript\nmytarget : {\n  src : [\'view/fist.html\', \'view/foe.html\', \'view/what.you.gonna.do.html\'],\n  dest : \'templates.js\',\n  options : { binderName : \'nodejs\' }\n}\n```\nA node.js application could:\n\n```javascript\n//Load the module\nvar templates = require(\'./templates.js\');\n\n//Render a template with a context object\nvar html1 = templates.fist({knuckles: true});\n\n//Render a template with context and partial templates\nvar html2 = templates.foe({}, {partialName: partialTemplateFromSomewhere});\n\n//Render a template with a non-variable-like name\nvar html3 = templates[\'what.you.gonna.do\']({context:\'catchphrase\'});\n\n```\n\nAll of the binders (with the exceptions of special case binders like the bootstrap and "hulk") seek to expose the full api of the template render in this manner.\n\nAlso, if a partial parameter is not specified, the default render behavior is to make all the other templates in the binder ("sibling templates") available as partials in the render.\n\nOther templates will vary slightly in their syntax to support their purpose.\n\n###Template naming\n\nThe default behavior of `grunt-hogan` is to use the input templates file name (without the extension) as the name of the template in the output, precompiled result.\n\nThus an input of `view/yada.hogan` will be available as `templates.yada(...)`. However, there are plenty of scenarios where\none may want to customize this behavior. This is accomplished via the `nameFunc` option on a task:\n\n```javascript\nmytarget : {\n    src : \'./view/multi*.html\',\n    dest : \'./temp/namefunc.js\',\n    options : {\n      binderName: \'hulk\',\n      \n      //Specify a custom name function\n      nameFunc: function(fileName) {\n        \n        //Grab the path package here locally for clarity\n        var _path = require(\'path\');\n        \n        //\'yada/yada/multi.1.js\' -> \'multi.1\'\n        var name = _path\n          .basename(\n            fileName, \n            _path.extname(fileName));\n            \n        //\'multi.1\' -> \'name_1\'\n        return \'name_\'+name[6];\n      }\n    }\n}\n```\n## Partial Templates\nHogan supports Partial Templates as defined by the [mustache spec](http://mustache.github.io/mustache.5.html).\n\nSay we have a template (defined in a file named `message.hogan`):\n```\n<p>Dear {{name}}, {{> mypartial}}</p>\n```\nAnd another template (defined in `mypartial.hogan`):\n```\n<em>{{text}}</em>\n```\nAssuming you use a `grunt-hogan` target to compile both these templates into a single module, you end up with a template render object something like:\n```javascript\n{\n    message: func(...){...},\n    mypartial: func(...){...}\n}\n```\nWe want Hogan to now expand the `mypartial` template and interpret the `message` template as:\n```\n<p>Dear {{name}}, <em>{{text}}</em></p>\n```\nBut how do we give Hogan what it needs to resolve the `mypartial` template? `grunt-hogan` supports this through three features:\n### 1. "Sibling" Partial Templates\nBy default, if you call the render function with just a context object:\n```javascript\ntemplate.message({name:\'Hulk\', text:\'Have a nice day!\'});\n```\n`grunt-hogan` will make the `mypartial` template available to the `message` template *automatically*. \nThis will happen if:\n\n  1. `message.hogan` and `mypartial.hogan` were bound together into a single template render module\n  2. The `nameFunc` (if specified) preserves the partial name `mypartial` mentioned in the `message.hogan` template\n\nSince `grunt-hogan` exposes the render as a function, this is the intended "common practice" for partial templates. \n\n*If you want a partial template to be automatically available, bind it as a sibling template with the template that depends on it.*\n\n### 2. Explicit Partial Templates\nTo disable the default behavior of "Sibling" Partial Templates, you simply specify the second parameter:\n```javascript\ntemplate.message(\n    {name:\'Hulk\', text:\'Have a nice day!\'}, //context\n    {mypartial: getMyPartialFromSomewhere()} //partials\n    );\n```\nBut now you are on your own when resolving the `Hogan.Template` objects passed through to the Hogan render. Hogan will use the passed partials only if they are valid `Hogan.Template` instances.\n### 3. Use the `exposeTemplates` task option\nIf you don\'t know at template compile time what partials are needed, \nand/or can\'t/won\'t put templates together as "Siblings", then you will need a way to retrieve the actual \n`Hogan.Template` instances from `grunt-hogan` modules. \nTo do this, specify the `exposeTemplates` option on the compile task. \nDoing so makes the actual templates available as a `template` property on the module:\n```javascript\n{\n    message: func(...){...},\n    mypartial: func(...){...},\n    templates: { message: {...}, mypartial: {...}}\n}\n```\nUsing this, you can pass the actual `Hogan.Template` instance to wherever it is needed (with the "Explicit Partial Templates" mentioned above, for example).\n## Examples\n * See [an example gruntfile](example/Gruntfile.js)\n\n## Contributing\nIn lieu of a formal styleguide, take care to maintain the existing coding style. Add unit tests for any new or changed functionality. Lint and test your code using [grunt][grunt].\n\n## Release History\n * 0.3.- - [in progress](https://github.com/automatonic/grunt-hogan/issues?milestone=3&state=open)\n * 0.2.2 - Binder template overhaul\n   * Added partial support on render functions\n   * Sibling partials by default\n   * *Breaking changes for precompiled template API*\n * 0.2.1 - AMD Binder\n   * Now supports use of "sibling templates" (defined within the same binder) as partials\n   * *Breaking change* - Now exports a render function instead of the full template\n * 0.1.1 - [*Breaking Changes* and Custom Binder Support](https://github.com/automatonic/grunt-hogan/issues?milestone=1)\n   * "render" directive has [been discarded](https://github.com/automatonic/grunt-hogan/issues/8)\n   * "options" notation has been discarded (supply attributes directly as keys on the target)\n\n##Acknowledgements\n * a comment by "baz" [here](http://soenkerohde.com/2012/02/node-js-server-side-compile-hogan-js-templates/) pointed me in the right direction\n\n## License\nCopyright (c) 2014 Elliott B. Edwards  \nLicensed under the MIT license.\n\n[grunt]: http://gruntjs.com/\n[getting_started]: https://github.com/gruntjs/grunt/wiki/Getting-started\n',
+37 silly install resolved     readmeFilename: 'README.md',
+37 silly install resolved     _id: 'grunt-hogan@0.3.0',
+37 silly install resolved     _from: 'grunt-hogan@*' } ]
+38 info install grunt-hogan@0.3.0 into /Users/adamsmallcomb/Projects/EM-Trainer
+39 info installOne grunt-hogan@0.3.0
+40 verbose installOne of grunt-hogan to /Users/adamsmallcomb/Projects/EM-Trainer not in flight; installing
+41 verbose lock using /Users/adamsmallcomb/.npm/_locks/grunt-hogan-e0a1f1823a52ef2c.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+42 silly install write writing grunt-hogan 0.3.0 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+43 verbose unbuild node_modules/grunt-hogan
+44 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+45 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+46 verbose tar unpack /Users/adamsmallcomb/.npm/grunt-hogan/0.3.0/package.tgz
+47 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+48 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan is being purged
+49 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+50 silly gunzTarPerm modes [ '755', '644' ]
+51 silly gunzTarPerm extractEntry package.json
+52 silly gunzTarPerm extractEntry .npmignore
+53 silly gunzTarPerm extractEntry README.md
+54 silly gunzTarPerm extractEntry Gruntfile.js
+55 silly gunzTarPerm extractEntry .jshintrc
+56 silly gunzTarPerm extractEntry LICENSE-MIT
+57 silly gunzTarPerm extractEntry appveyor.yml
+58 silly gunzTarPerm extractEntry bin/grunt-hogan
+59 silly gunzTarPerm extractEntry tasks/binders.js
+60 silly gunzTarPerm extractEntry tasks/hogan.js
+61 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/package.json
+62 info preinstall grunt-hogan@0.3.0
+63 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/package.json
+64 silly prepareForInstallMany adding hogan.js@^3.0.2 from grunt-hogan dependencies
+65 silly prepareForInstallMany adding lodash@^2.4.1 from grunt-hogan dependencies
+66 silly prepareForInstallMany adding underscore@~1.4.4 from grunt-hogan dependencies
+67 silly prepareForInstallMany adding grunt@~0.4.5 from grunt-hogan peerDependencies
+68 warn peerDependencies The peer dependency grunt@~0.4.5 included from grunt-hogan will no
+69 warn peerDependencies longer be automatically installed to fulfill the peerDependency
+70 warn peerDependencies in npm 3+. Your application will need to depend on it explicitly.
+71 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/package.json
+72 silly cache add args [ 'hogan.js@^3.0.2', null ]
+73 verbose cache add spec hogan.js@^3.0.2
+74 silly cache add args [ 'lodash@^2.4.1', null ]
+75 verbose cache add spec lodash@^2.4.1
+76 silly cache add parsed spec Result {
+76 silly cache add   raw: 'hogan.js@^3.0.2',
+76 silly cache add   scope: null,
+76 silly cache add   name: 'hogan.js',
+76 silly cache add   rawSpec: '^3.0.2',
+76 silly cache add   spec: '>=3.0.2 <4.0.0',
+76 silly cache add   type: 'range' }
+77 silly addNamed hogan.js@>=3.0.2 <4.0.0
+78 verbose addNamed ">=3.0.2 <4.0.0" is a valid semver range for hogan.js
+79 silly addNameRange { name: 'hogan.js', range: '>=3.0.2 <4.0.0', hasData: false }
+80 silly mapToRegistry name hogan.js
+81 silly mapToRegistry using default registry
+82 silly mapToRegistry registry https://registry.npmjs.org/
+83 silly mapToRegistry uri https://registry.npmjs.org/hogan.js
+84 verbose addNameRange registry:https://registry.npmjs.org/hogan.js not in flight; fetching
+85 silly cache add parsed spec Result {
+85 silly cache add   raw: 'lodash@^2.4.1',
+85 silly cache add   scope: null,
+85 silly cache add   name: 'lodash',
+85 silly cache add   rawSpec: '^2.4.1',
+85 silly cache add   spec: '>=2.4.1 <3.0.0',
+85 silly cache add   type: 'range' }
+86 silly addNamed lodash@>=2.4.1 <3.0.0
+87 verbose addNamed ">=2.4.1 <3.0.0" is a valid semver range for lodash
+88 silly addNameRange { name: 'lodash', range: '>=2.4.1 <3.0.0', hasData: false }
+89 silly mapToRegistry name lodash
+90 silly mapToRegistry using default registry
+91 silly mapToRegistry registry https://registry.npmjs.org/
+92 silly mapToRegistry uri https://registry.npmjs.org/lodash
+93 verbose addNameRange registry:https://registry.npmjs.org/lodash not in flight; fetching
+94 silly cache add args [ 'underscore@~1.4.4', null ]
+95 verbose cache add spec underscore@~1.4.4
+96 silly cache add parsed spec Result {
+96 silly cache add   raw: 'underscore@~1.4.4',
+96 silly cache add   scope: null,
+96 silly cache add   name: 'underscore',
+96 silly cache add   rawSpec: '~1.4.4',
+96 silly cache add   spec: '>=1.4.4 <1.5.0',
+96 silly cache add   type: 'range' }
+97 silly addNamed underscore@>=1.4.4 <1.5.0
+98 verbose addNamed ">=1.4.4 <1.5.0" is a valid semver range for underscore
+99 silly addNameRange { name: 'underscore', range: '>=1.4.4 <1.5.0', hasData: false }
+100 silly mapToRegistry name underscore
+101 silly mapToRegistry using default registry
+102 silly mapToRegistry registry https://registry.npmjs.org/
+103 silly mapToRegistry uri https://registry.npmjs.org/underscore
+104 verbose addNameRange registry:https://registry.npmjs.org/underscore not in flight; fetching
+105 verbose get https://registry.npmjs.org/lodash not expired, no request
+106 silly addNameRange number 2 { name: 'lodash', range: '>=2.4.1 <3.0.0', hasData: true }
+107 silly addNameRange versions [ 'lodash',
+107 silly addNameRange   [ '0.1.0',
+107 silly addNameRange     '0.2.0',
+107 silly addNameRange     '0.2.1',
+107 silly addNameRange     '0.2.2',
+107 silly addNameRange     '0.3.0',
+107 silly addNameRange     '0.3.1',
+107 silly addNameRange     '0.3.2',
+107 silly addNameRange     '0.4.0',
+107 silly addNameRange     '0.4.1',
+107 silly addNameRange     '0.4.2',
+107 silly addNameRange     '0.5.0-rc.1',
+107 silly addNameRange     '0.5.0',
+107 silly addNameRange     '0.5.1',
+107 silly addNameRange     '0.5.2',
+107 silly addNameRange     '0.6.0',
+107 silly addNameRange     '0.6.1',
+107 silly addNameRange     '0.7.0',
+107 silly addNameRange     '0.8.0',
+107 silly addNameRange     '0.8.1',
+107 silly addNameRange     '0.8.2',
+107 silly addNameRange     '0.9.0',
+107 silly addNameRange     '0.9.1',
+107 silly addNameRange     '0.9.2',
+107 silly addNameRange     '0.10.0',
+107 silly addNameRange     '1.0.0-rc.1',
+107 silly addNameRange     '1.0.0-rc.2',
+107 silly addNameRange     '1.0.0-rc.3',
+107 silly addNameRange     '1.0.0',
+107 silly addNameRange     '1.0.1',
+107 silly addNameRange     '1.1.0',
+107 silly addNameRange     '1.1.1',
+107 silly addNameRange     '1.2.0',
+107 silly addNameRange     '1.2.1',
+107 silly addNameRange     '1.3.0',
+107 silly addNameRange     '1.3.1',
+107 silly addNameRange     '2.0.0',
+107 silly addNameRange     '2.1.0',
+107 silly addNameRange     '2.2.0',
+107 silly addNameRange     '2.2.1',
+107 silly addNameRange     '2.3.0',
+107 silly addNameRange     '2.4.0',
+107 silly addNameRange     '2.4.1',
+107 silly addNameRange     '3.0.0',
+107 silly addNameRange     '3.0.1',
+107 silly addNameRange     '3.1.0',
+107 silly addNameRange     '3.2.0',
+107 silly addNameRange     '3.3.0',
+107 silly addNameRange     '3.3.1',
+107 silly addNameRange     '3.4.0',
+107 silly addNameRange     '3.5.0',
+107 silly addNameRange     '3.6.0',
+107 silly addNameRange     '1.0.2',
+107 silly addNameRange     '3.7.0',
+107 silly addNameRange     '2.4.2',
+107 silly addNameRange     '3.8.0',
+107 silly addNameRange     '3.9.0',
+107 silly addNameRange     '3.9.1',
+107 silly addNameRange     '3.9.2',
+107 silly addNameRange     '3.9.3',
+107 silly addNameRange     '3.10.0',
+107 silly addNameRange     '3.10.1',
+107 silly addNameRange     '4.0.0',
+107 silly addNameRange     '4.0.1',
+107 silly addNameRange     '4.1.0',
+107 silly addNameRange     '4.2.0',
+107 silly addNameRange     '4.2.1',
+107 silly addNameRange     '4.3.0',
+107 silly addNameRange     '4.4.0',
+107 silly addNameRange     '4.5.0',
+107 silly addNameRange     '4.5.1',
+107 silly addNameRange     '4.6.0',
+107 silly addNameRange     '4.6.1',
+107 silly addNameRange     '4.7.0',
+107 silly addNameRange     '4.8.0',
+107 silly addNameRange     '4.8.1',
+107 silly addNameRange     '4.8.2',
+107 silly addNameRange     '4.9.0',
+107 silly addNameRange     '4.10.0',
+107 silly addNameRange     '4.11.0',
+107 silly addNameRange     '4.11.1',
+107 silly addNameRange     '4.11.2',
+107 silly addNameRange     '4.12.0',
+107 silly addNameRange     '4.13.0',
+107 silly addNameRange     '4.13.1' ] ]
+108 silly addNamed lodash@2.4.2
+109 verbose addNamed "2.4.2" is a plain semver version for lodash
+110 verbose request uri https://registry.npmjs.org/hogan.js
+111 verbose request no auth needed
+112 info attempt registry request try #1 at 8:12:26 PM
+113 verbose etag "C52KM8PKK9UA3NUX83A7D9BB2"
+114 http request GET https://registry.npmjs.org/hogan.js
+115 verbose request uri https://registry.npmjs.org/underscore
+116 verbose request no auth needed
+117 info attempt registry request try #1 at 8:12:26 PM
+118 verbose etag "DMXKJYRATFAHYFB5QSZIDCSXL"
+119 http request GET https://registry.npmjs.org/underscore
+120 silly cache afterAdd lodash@2.4.2
+121 verbose afterAdd /Users/adamsmallcomb/.npm/lodash/2.4.2/package/package.json not in flight; writing
+122 verbose afterAdd /Users/adamsmallcomb/.npm/lodash/2.4.2/package/package.json written
+123 http 200 https://registry.npmjs.org/underscore
+124 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+124 verbose headers   etag: '"6ZMDOEJMIE5SJFLT041CVM3D9"',
+124 verbose headers   'content-type': 'application/json',
+124 verbose headers   'content-encoding': 'gzip',
+124 verbose headers   'cache-control': 'max-age=300',
+124 verbose headers   'content-length': '7752',
+124 verbose headers   'accept-ranges': 'bytes',
+124 verbose headers   date: 'Sat, 28 May 2016 00:12:20 GMT',
+124 verbose headers   via: '1.1 varnish',
+124 verbose headers   age: '300',
+124 verbose headers   connection: 'keep-alive',
+124 verbose headers   'x-served-by': 'cache-ord1728-ORD',
+124 verbose headers   'x-cache': 'HIT',
+124 verbose headers   'x-cache-hits': '5',
+124 verbose headers   'x-timer': 'S1464394340.586731,VS0,VE0',
+124 verbose headers   vary: 'Accept-Encoding' }
+125 silly get cb [ 200,
+125 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+125 silly get     etag: '"6ZMDOEJMIE5SJFLT041CVM3D9"',
+125 silly get     'content-type': 'application/json',
+125 silly get     'content-encoding': 'gzip',
+125 silly get     'cache-control': 'max-age=300',
+125 silly get     'content-length': '7752',
+125 silly get     'accept-ranges': 'bytes',
+125 silly get     date: 'Sat, 28 May 2016 00:12:20 GMT',
+125 silly get     via: '1.1 varnish',
+125 silly get     age: '300',
+125 silly get     connection: 'keep-alive',
+125 silly get     'x-served-by': 'cache-ord1728-ORD',
+125 silly get     'x-cache': 'HIT',
+125 silly get     'x-cache-hits': '5',
+125 silly get     'x-timer': 'S1464394340.586731,VS0,VE0',
+125 silly get     vary: 'Accept-Encoding' } ]
+126 verbose get saving underscore to /Users/adamsmallcomb/.npm/registry.npmjs.org/underscore/.cache.json
+127 silly addNameRange number 2 { name: 'underscore', range: '>=1.4.4 <1.5.0', hasData: true }
+128 silly addNameRange versions [ 'underscore',
+128 silly addNameRange   [ '1.0.3',
+128 silly addNameRange     '1.0.4',
+128 silly addNameRange     '1.1.0',
+128 silly addNameRange     '1.1.1',
+128 silly addNameRange     '1.1.2',
+128 silly addNameRange     '1.1.3',
+128 silly addNameRange     '1.1.4',
+128 silly addNameRange     '1.1.5',
+128 silly addNameRange     '1.1.6',
+128 silly addNameRange     '1.1.7',
+128 silly addNameRange     '1.2.0',
+128 silly addNameRange     '1.2.1',
+128 silly addNameRange     '1.2.2',
+128 silly addNameRange     '1.2.3',
+128 silly addNameRange     '1.2.4',
+128 silly addNameRange     '1.3.0',
+128 silly addNameRange     '1.3.1',
+128 silly addNameRange     '1.3.2',
+128 silly addNameRange     '1.3.3',
+128 silly addNameRange     '1.4.0',
+128 silly addNameRange     '1.4.1',
+128 silly addNameRange     '1.4.2',
+128 silly addNameRange     '1.4.3',
+128 silly addNameRange     '1.4.4',
+128 silly addNameRange     '1.5.0',
+128 silly addNameRange     '1.5.1',
+128 silly addNameRange     '1.5.2',
+128 silly addNameRange     '1.6.0',
+128 silly addNameRange     '1.7.0',
+128 silly addNameRange     '1.8.0',
+128 silly addNameRange     '1.8.1',
+128 silly addNameRange     '1.8.2',
+128 silly addNameRange     '1.8.3' ] ]
+129 silly addNamed underscore@1.4.4
+130 verbose addNamed "1.4.4" is a plain semver version for underscore
+131 silly cache afterAdd underscore@1.4.4
+132 verbose afterAdd /Users/adamsmallcomb/.npm/underscore/1.4.4/package/package.json not in flight; writing
+133 verbose afterAdd /Users/adamsmallcomb/.npm/underscore/1.4.4/package/package.json written
+134 http 200 https://registry.npmjs.org/hogan.js
+135 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+135 verbose headers   etag: '"B5SL12I6SF3C4SXTW9O0DSV40"',
+135 verbose headers   'content-type': 'application/json',
+135 verbose headers   'content-encoding': 'gzip',
+135 verbose headers   'cache-control': 'max-age=300',
+135 verbose headers   'content-length': '3632',
+135 verbose headers   'accept-ranges': 'bytes',
+135 verbose headers   date: 'Sat, 28 May 2016 00:12:20 GMT',
+135 verbose headers   via: '1.1 varnish',
+135 verbose headers   age: '0',
+135 verbose headers   connection: 'keep-alive',
+135 verbose headers   'x-served-by': 'cache-ord1732-ORD',
+135 verbose headers   'x-cache': 'HIT',
+135 verbose headers   'x-cache-hits': '1',
+135 verbose headers   'x-timer': 'S1464394340.589892,VS0,VE333',
+135 verbose headers   vary: 'Accept-Encoding' }
+136 silly get cb [ 200,
+136 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+136 silly get     etag: '"B5SL12I6SF3C4SXTW9O0DSV40"',
+136 silly get     'content-type': 'application/json',
+136 silly get     'content-encoding': 'gzip',
+136 silly get     'cache-control': 'max-age=300',
+136 silly get     'content-length': '3632',
+136 silly get     'accept-ranges': 'bytes',
+136 silly get     date: 'Sat, 28 May 2016 00:12:20 GMT',
+136 silly get     via: '1.1 varnish',
+136 silly get     age: '0',
+136 silly get     connection: 'keep-alive',
+136 silly get     'x-served-by': 'cache-ord1732-ORD',
+136 silly get     'x-cache': 'HIT',
+136 silly get     'x-cache-hits': '1',
+136 silly get     'x-timer': 'S1464394340.589892,VS0,VE333',
+136 silly get     vary: 'Accept-Encoding' } ]
+137 verbose get saving hogan.js to /Users/adamsmallcomb/.npm/registry.npmjs.org/hogan.js/.cache.json
+138 silly addNameRange number 2 { name: 'hogan.js', range: '>=3.0.2 <4.0.0', hasData: true }
+139 silly addNameRange versions [ 'hogan.js',
+139 silly addNameRange   [ '1.0.0',
+139 silly addNameRange     '1.0.2',
+139 silly addNameRange     '1.0.4-dev',
+139 silly addNameRange     '1.0.5-dev',
+139 silly addNameRange     '2.0.0',
+139 silly addNameRange     '3.0.1',
+139 silly addNameRange     '3.0.2' ] ]
+140 silly addNamed hogan.js@3.0.2
+141 verbose addNamed "3.0.2" is a plain semver version for hogan.js
+142 silly cache afterAdd hogan.js@3.0.2
+143 verbose afterAdd /Users/adamsmallcomb/.npm/hogan.js/3.0.2/package/package.json not in flight; writing
+144 verbose afterAdd /Users/adamsmallcomb/.npm/hogan.js/3.0.2/package/package.json written
+145 silly install resolved [ { name: 'lodash',
+145 silly install resolved     version: '2.4.2',
+145 silly install resolved     description: 'A utility library delivering consistency, customization, performance, & extras.',
+145 silly install resolved     homepage: 'http://lodash.com/',
+145 silly install resolved     license: 'MIT',
+145 silly install resolved     main: 'dist/lodash.js',
+145 silly install resolved     keywords:
+145 silly install resolved      [ 'amd',
+145 silly install resolved        'browser',
+145 silly install resolved        'client',
+145 silly install resolved        'customize',
+145 silly install resolved        'functional',
+145 silly install resolved        'server',
+145 silly install resolved        'util' ],
+145 silly install resolved     author:
+145 silly install resolved      { name: 'John-David Dalton',
+145 silly install resolved        email: 'john.david.dalton@gmail.com',
+145 silly install resolved        url: 'http://allyoucanleet.com/' },
+145 silly install resolved     contributors: [ [Object], [Object], [Object], [Object] ],
+145 silly install resolved     bugs: { url: 'https://github.com/lodash/lodash/issues' },
+145 silly install resolved     repository: { type: 'git', url: 'git+https://github.com/lodash/lodash.git' },
+145 silly install resolved     engines: [ 'node', 'rhino' ],
+145 silly install resolved     files:
+145 silly install resolved      [ 'LICENSE.txt',
+145 silly install resolved        'lodash.js',
+145 silly install resolved        'dist/lodash.js',
+145 silly install resolved        'dist/lodash.min.js',
+145 silly install resolved        'dist/lodash.compat.js',
+145 silly install resolved        'dist/lodash.compat.min.js',
+145 silly install resolved        'dist/lodash.underscore.js',
+145 silly install resolved        'dist/lodash.underscore.min.js' ],
+145 silly install resolved     jam: { main: 'dist/lodash.compat.js', include: [Object] },
+145 silly install resolved     volo: { type: 'directory', ignore: [Object] },
+145 silly install resolved     readme: '# Lo-Dash v2.4.2\nA utility library delivering consistency, [customization](https://lodash.com/custom-builds), [performance](https://lodash.com/benchmarks), & [extras](https://lodash.com/#features).\n\n## Download\n\nCheck out our [wiki]([https://github.com/lodash/lodash/wiki/build-differences]) for details over the differences between builds.\n\n* Modern builds perfect for newer browsers/environments:<br>\n[Development](https://raw.github.com/lodash/lodash/2.4.2/dist/lodash.js) &\n[Production](https://raw.github.com/lodash/lodash/2.4.2/dist/lodash.min.js)\n\n* Compatibility builds for older environment support too:<br>\n[Development](https://raw.github.com/lodash/lodash/2.4.2/dist/lodash.compat.js) &\n[Production](https://raw.github.com/lodash/lodash/2.4.2/dist/lodash.compat.min.js)\n\n* Underscore builds to use as a drop-in replacement:<br>\n[Development](https://raw.github.com/lodash/lodash/2.4.2/dist/lodash.underscore.js) &\n[Production](https://raw.github.com/lodash/lodash/2.4.2/dist/lodash.underscore.min.js)\n\nCDN copies are available on [cdnjs](http://cdnjs.com/libraries/lodash.js/) & [jsDelivr](http://www.jsdelivr.com/#!lodash). For smaller file sizes, create [custom builds](https://lodash.com/custom-builds) with only the features needed.\n\nLove modules? We’ve got you covered with [lodash-amd](https://npmjs.org/package/lodash-amd), [lodash-es6](https://github.com/lodash/lodash-es6), [lodash-node](https://npmjs.org/package/lodash-node), & [npm packages](https://npmjs.org/browse/keyword/lodash-modularized) per method.\n\n## Dive in\n\nThere’s plenty of **[documentation](https://lodash.com/docs)**, [unit tests](https://lodash.com/tests), & [benchmarks](https://lodash.com/benchmarks).<br>\nCheck out <a href="http://devdocs.io/lodash/">DevDocs</a> as a fast, organized, & searchable interface for our documentation.\n\nThe full changelog for this release is available on our [wiki](https://github.com/lodash/lodash/wiki/Changelog).<br>\nA list of upcoming features is available on our [roadmap](https://github.com/lodash/lodash/wiki/Roadmap).\n\n## Installation & usage\n\nIn browsers:\n\n```html\n<script src="lodash.js"></script>\n```\n\nUsing [`npm`](http://npmjs.org/):\n\n```bash\nnpm i --save lodash\n\n{sudo} npm i -g lodash\nnpm ln lodash\n```\n\nIn [Node.js](http://nodejs.org/) & [Ringo](http://ringojs.org/):\n\n```js\nvar _ = require(\'lodash\');\n// or as Underscore\nvar _ = require(\'lodash/dist/lodash.underscore\');\n```\n\n**Notes:**\n * Don’t assign values to [special variable](http://nodejs.org/api/repl.html#repl_repl_features) `_` when in the REPL\n * If Lo-Dash is installed globally, run [`npm ln lodash`](http://blog.nodejs.org/2011/03/23/npm-1-0-global-vs-local-installation/) in your project’s root directory *before* requiring it\n\nIn [Rhino](http://www.mozilla.org/rhino/):\n\n```js\nload(\'lodash.js\');\n```\n\nIn an AMD loader:\n\n```js\nrequire({\n  \'packages\': [\n    { \'name\': \'lodash\', \'location\': \'path/to/lodash\', \'main\': \'lodash\' }\n  ]\n},\n[\'lodash\'], function(_) {\n  console.log(_.VERSION);\n});\n```\n\n## Resources\n\n * Podcasts\n  - [JavaScript Jabber](http://javascriptjabber.com/079-jsj-lo-dash-with-john-david-dalton/)\n\n * Posts\n  - [Say “Hello” to Lo-Dash](http://kitcambridge.be/blog/say-hello-to-lo-dash/)\n  - [Custom builds in Lo-Dash 2.0](http://kitcambridge.be/blog/custom-builds-in-lo-dash-2-dot-0/)\n\n * Videos\n  - [Introduction](https://vimeo.com/44154599)\n  - [Origins](https://vimeo.com/44154600)\n  - [Optimizations & builds](https://vimeo.com/44154601)\n  - [Native method use](https://vimeo.com/48576012)\n  - [Testing](https://vimeo.com/45865290)\n  - [CascadiaJS ’12](http://www.youtube.com/watch?v=dpPy4f_SeEk)\n\n A list of other community created podcasts, posts, & videos is available on our [wiki](https://github.com/lodash/lodash/wiki/Resources).\n\n## Features\n\n * AMD loader support ([curl](https://github.com/cujojs/curl), [dojo](http://dojotoolkit.org/), [requirejs](http://requirejs.org/), etc.)\n * [_(…)](https://lodash.com/docs#_) supports intuitive chaining\n * [_.at](https://lodash.com/docs#at) for cherry-picking collection values\n * [_.bindKey](https://lodash.com/docs#bindKey) for binding [*“lazy”*](http://michaux.ca/articles/lazy-function-definition-pattern) defined methods\n * [_.clone](https://lodash.com/docs#clone) supports shallow cloning of `Date` & `RegExp` objects\n * [_.cloneDeep](https://lodash.com/docs#cloneDeep) for deep cloning arrays & objects\n * [_.constant](https://lodash.com/docs#constant) & [_.property](https://lodash.com/docs#property) function generators for composing functions\n * [_.contains](https://lodash.com/docs#contains) accepts a `fromIndex`\n * [_.create](https://lodash.com/docs#create) for easier object inheritance\n * [_.createCallback](https://lodash.com/docs#createCallback) for extending callbacks in methods & mixins\n * [_.curry](https://lodash.com/docs#curry) for creating [curried](http://hughfdjackson.com/javascript/2013/07/06/why-curry-helps/) functions\n * [_.debounce](https://lodash.com/docs#debounce) & [_.throttle](https://lodash.com/docs#throttle) accept additional `options` for more control\n * [_.findIndex](https://lodash.com/docs#findIndex) & [_.findKey](https://lodash.com/docs#findKey) for finding indexes & keys\n * [_.forEach](https://lodash.com/docs#forEach) is chainable & supports exiting early\n * [_.forIn](https://lodash.com/docs#forIn) for iterating own & inherited properties\n * [_.forOwn](https://lodash.com/docs#forOwn) for iterating own properties\n * [_.isPlainObject](https://lodash.com/docs#isPlainObject) for checking if values are created by `Object`\n * [_.mapValues](https://lodash.com/docs#mapValues) for [mapping](https://lodash.com/docs#map) values to an object\n * [_.memoize](https://lodash.com/docs#memoize) exposes the `cache` of memoized functions\n * [_.merge](https://lodash.com/docs#merge) for a deep [_.extend](https://lodash.com/docs#extend)\n * [_.noop](https://lodash.com/docs#noop) for function placeholders\n * [_.now](https://lodash.com/docs#now) as a cross-browser `Date.now` alternative\n * [_.parseInt](https://lodash.com/docs#parseInt) for consistent behavior\n * [_.pull](https://lodash.com/docs#pull) & [_.remove](https://lodash.com/docs#remove) for mutating arrays\n * [_.random](https://lodash.com/docs#random) supports returning floating-point numbers\n * [_.runInContext](https://lodash.com/docs#runInContext) for easier mocking\n * [_.sortBy](https://lodash.com/docs#sortBy) supports sorting by multiple properties\n * [_.support](https://lodash.com/docs#support) for flagging environment features\n * [_.template](https://lodash.com/docs#template) supports [*“imports”*](https://lodash.com/docs#templateSettings_imports) options & [ES6 template delimiters](http://people.mozilla.org/~jorendorff/es6-draft.html#sec-literals-string-literals)\n * [_.transform](https://lodash.com/docs#transform) as a powerful alternative to [_.reduce](https://lodash.com/docs#reduce) for transforming objects\n * [_.where](https://lodash.com/docs#where) supports deep object comparisons\n * [_.xor](https://lodash.com/docs#xor) as a companion to [_.difference](https://lodash.com/docs#difference), [_.intersection](https://lodash.com/docs#intersection), & [_.union](https://lodash.com/docs#union)\n * [_.zip](https://lodash.com/docs#zip) is capable of unzipping values\n * [_.omit](https://lodash.com/docs#omit), [_.pick](https://lodash.com/docs#pick), &\n   [more](https://lodash.com/docs "_.assign, _.clone, _.cloneDeep, _.first, _.initial, _.isEqual, _.last, _.merge, _.rest") accept callbacks\n * [_.contains](https://lodash.com/docs#contains), [_.toArray](https://lodash.com/docs#toArray), &\n   [more](https://lodash.com/docs "_.at, _.countBy, _.every, _.filter, _.find, _.forEach, _.forEachRight, _.groupBy, _.invoke, _.map, _.max, _.min, _.pluck, _.reduce, _.reduceRight, _.reject, _.shuffle, _.size, _.some, _.sortBy, _.where") accept strings\n * [_.filter](https://lodash.com/docs#filter), [_.map](https://lodash.com/docs#map), &\n   [more](https://lodash.com/docs "_.countBy, _.every, _.find, _.findKey, _.findLast, _.findLastIndex, _.findLastKey, _.first, _.groupBy, _.initial, _.last, _.max, _.min, _.reject, _.rest, _.some, _.sortBy, _.sortedIndex, _.uniq") support *“_.pluck”* & *“_.where”* shorthands\n * [_.findLast](https://lodash.com/docs#findLast), [_.findLastIndex](https://lodash.com/docs#findLastIndex), &\n   [more](https://lodash.com/docs "_.findLastKey, _.forEachRight, _.forInRight, _.forOwnRight, _.partialRight") right-associative methods\n\n## Support\n\nTested in Chrome 5~31, Firefox 2~25, IE 6-11, Opera 9.25-17, Safari 3-7, Node.js 0.6.21-0.10.22, Narwhal 0.3.2, PhantomJS 1.9.2, RingoJS 0.9, & Rhino 1.7RC5.\n',
+145 silly install resolved     readmeFilename: 'README.md',
+145 silly install resolved     _id: 'lodash@2.4.2',
+145 silly install resolved     _from: 'lodash@>=2.4.1 <3.0.0' },
+145 silly install resolved   { name: 'underscore',
+145 silly install resolved     description: 'JavaScript\'s functional programming helper library.',
+145 silly install resolved     homepage: 'http://underscorejs.org',
+145 silly install resolved     keywords: [ 'util', 'functional', 'server', 'client', 'browser' ],
+145 silly install resolved     author: { name: 'Jeremy Ashkenas', email: 'jeremy@documentcloud.org' },
+145 silly install resolved     repository:
+145 silly install resolved      { type: 'git',
+145 silly install resolved        url: 'git://github.com/documentcloud/underscore.git' },
+145 silly install resolved     main: 'underscore.js',
+145 silly install resolved     version: '1.4.4',
+145 silly install resolved     devDependencies: { phantomjs: '0.2.2' },
+145 silly install resolved     scripts: { test: 'phantomjs test/vendor/runner.js test/index.html?noglobals=true' },
+145 silly install resolved     readme: '                       __\n                      /\\ \\                                                         __\n     __  __    ___    \\_\\ \\     __   _ __   ____    ___    ___   _ __    __       /\\_\\    ____\n    /\\ \\/\\ \\ /\' _ `\\  /\'_  \\  /\'__`\\/\\  __\\/ ,__\\  / ___\\ / __`\\/\\  __\\/\'__`\\     \\/\\ \\  /\',__\\\n    \\ \\ \\_\\ \\/\\ \\/\\ \\/\\ \\ \\ \\/\\  __/\\ \\ \\//\\__, `\\/\\ \\__//\\ \\ \\ \\ \\ \\//\\  __/  __  \\ \\ \\/\\__, `\\\n     \\ \\____/\\ \\_\\ \\_\\ \\___,_\\ \\____\\\\ \\_\\\\/\\____/\\ \\____\\ \\____/\\ \\_\\\\ \\____\\/\\_\\ _\\ \\ \\/\\____/\n      \\/___/  \\/_/\\/_/\\/__,_ /\\/____/ \\/_/ \\/___/  \\/____/\\/___/  \\/_/ \\/____/\\/_//\\ \\_\\ \\/___/\n                                                                                  \\ \\____/\n                                                                                   \\/___/\n\nUnderscore.js is a utility-belt library for JavaScript that provides\nsupport for the usual functional suspects (each, map, reduce, filter...)\nwithout extending any core JavaScript objects.\n\nFor Docs, License, Tests, and pre-packed downloads, see:\nhttp://underscorejs.org\n\nMany thanks to our contributors:\nhttps://github.com/documentcloud/underscore/contributors\n',
+145 silly install resolved     readmeFilename: 'README.md',
+145 silly install resolved     bugs: { url: 'https://github.com/documentcloud/underscore/issues' },
+145 silly install resolved     _id: 'underscore@1.4.4',
+145 silly install resolved     _from: 'underscore@>=1.4.4 <1.5.0' },
+145 silly install resolved   { name: 'hogan.js',
+145 silly install resolved     description: 'A mustache compiler.',
+145 silly install resolved     version: '3.0.2',
+145 silly install resolved     keywords: [ 'mustache', 'template' ],
+145 silly install resolved     main: './lib/hogan.js',
+145 silly install resolved     homepage: 'http://twitter.github.com/hogan.js/',
+145 silly install resolved     author: { name: 'Twitter Inc.' },
+145 silly install resolved     repository:
+145 silly install resolved      { type: 'git',
+145 silly install resolved        url: 'git+https://github.com/twitter/hogan.js.git' },
+145 silly install resolved     licenses: [ [Object] ],
+145 silly install resolved     dependencies: { nopt: '1.0.10', mkdirp: '0.3.0' },
+145 silly install resolved     devDependencies:
+145 silly install resolved      { 'uglify-js': '2.x',
+145 silly install resolved        jsdom: '0.3.4',
+145 silly install resolved        step: '0.0.5',
+145 silly install resolved        rimraf: '2.0.1' },
+145 silly install resolved     bin: { hulk: './bin/hulk' },
+145 silly install resolved     gitHead: 'c52d142643e764e3f82e8ad3f2d44a46b82d1640',
+145 silly install resolved     bugs: { url: 'https://github.com/twitter/hogan.js/issues' },
+145 silly install resolved     _id: 'hogan.js@3.0.2',
+145 silly install resolved     scripts: {},
+145 silly install resolved     _shasum: '4cd9e1abd4294146e7679e41d7898732b02c7bfd',
+145 silly install resolved     _from: 'hogan.js@>=3.0.2 <4.0.0',
+145 silly install resolved     _npmVersion: '1.4.15',
+145 silly install resolved     _npmUser: { name: 'sayrer', email: 'sayrer@gmail.com' },
+145 silly install resolved     maintainers: [ [Object], [Object] ],
+145 silly install resolved     dist:
+145 silly install resolved      { shasum: '4cd9e1abd4294146e7679e41d7898732b02c7bfd',
+145 silly install resolved        tarball: 'http://registry.npmjs.org/hogan.js/-/hogan.js-3.0.2.tgz' },
+145 silly install resolved     directories: {},
+145 silly install resolved     _resolved: 'https://registry.npmjs.org/hogan.js/-/hogan.js-3.0.2.tgz',
+145 silly install resolved     readme: 'ERROR: No README data found!' } ]
+146 info install lodash@2.4.2 into /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+147 info install underscore@1.4.4 into /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+148 info install hogan.js@3.0.2 into /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+149 info installOne lodash@2.4.2
+150 verbose installOne of lodash to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan not in flight; installing
+151 info installOne underscore@1.4.4
+152 verbose installOne of underscore to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan not in flight; installing
+153 info installOne hogan.js@3.0.2
+154 verbose installOne of hogan.js to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan not in flight; installing
+155 verbose lock using /Users/adamsmallcomb/.npm/_locks/lodash-f649dde9ea04235c.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+156 verbose lock using /Users/adamsmallcomb/.npm/_locks/underscore-befc02d5554b8edf.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+157 verbose lock using /Users/adamsmallcomb/.npm/_locks/hogan-js-323ae53b8bf59f68.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+158 silly install write writing lodash 2.4.2 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+159 silly install write writing underscore 1.4.4 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+160 silly install write writing hogan.js 3.0.2 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+161 verbose unbuild node_modules/grunt-hogan/node_modules/underscore
+162 verbose unbuild node_modules/grunt-hogan/node_modules/lodash
+163 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+164 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+165 verbose unbuild node_modules/grunt-hogan/node_modules/hogan.js
+166 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+167 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+168 verbose tar unpack /Users/adamsmallcomb/.npm/underscore/1.4.4/package.tgz
+169 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+170 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore is being purged
+171 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+172 verbose tar unpack /Users/adamsmallcomb/.npm/lodash/2.4.2/package.tgz
+173 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+174 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash is being purged
+175 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+176 silly gunzTarPerm modes [ '755', '644' ]
+177 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+178 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+179 silly gunzTarPerm modes [ '755', '644' ]
+180 verbose tar unpack /Users/adamsmallcomb/.npm/hogan.js/3.0.2/package.tgz
+181 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+182 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js is being purged
+183 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+184 silly gunzTarPerm modes [ '755', '644' ]
+185 silly gunzTarPerm extractEntry package.json
+186 silly gunzTarPerm extractEntry package.json
+187 silly gunzTarPerm extractEntry package.json
+188 silly gunzTarPerm extractEntry README.md
+189 silly gunzTarPerm extractEntry lodash.js
+190 silly gunzTarPerm extractEntry .npmignore
+191 silly gunzTarPerm extractEntry README.md
+192 silly gunzTarPerm extractEntry .npmignore
+193 silly gunzTarPerm extractEntry README.md
+194 silly gunzTarPerm extractEntry LICENSE
+195 silly gunzTarPerm extractEntry underscore-min.js
+196 silly gunzTarPerm extractEntry LICENSE.txt
+197 silly gunzTarPerm extractEntry LICENSE
+198 silly gunzTarPerm extractEntry inheritance.js
+199 silly gunzTarPerm extractEntry dist/lodash.compat.js
+200 silly gunzTarPerm extractEntry index.js
+201 silly gunzTarPerm extractEntry test.js
+202 silly gunzTarPerm extractEntry dist/hogan-3.0.2.amd.js
+203 silly gunzTarPerm extractEntry underscore.js
+204 silly gunzTarPerm extractEntry index.html
+205 silly gunzTarPerm extractEntry dist/hogan-3.0.2.common.js
+206 silly gunzTarPerm extractEntry dist/hogan-3.0.2.js
+207 silly gunzTarPerm extractEntry dist/lodash.compat.min.js
+208 silly gunzTarPerm extractEntry .travis.yml
+209 silly gunzTarPerm extractEntry CONTRIBUTING.md
+210 silly gunzTarPerm extractEntry dist/lodash.js
+211 silly gunzTarPerm extractEntry dist/hogan-3.0.2.min.amd.js
+212 silly gunzTarPerm extractEntry dist/hogan-3.0.2.min.common.js
+213 silly gunzTarPerm extractEntry CNAME
+214 silly gunzTarPerm extractEntry favicon.ico
+215 silly gunzTarPerm extractEntry dist/hogan-3.0.2.min.js
+216 silly gunzTarPerm extractEntry dist/hogan-3.0.2.min.mustache.js
+217 silly gunzTarPerm extractEntry dist/lodash.min.js
+218 silly gunzTarPerm extractEntry dist/lodash.underscore.js
+219 silly gunzTarPerm extractEntry dist/hogan-3.0.2.mustache.js
+220 silly gunzTarPerm extractEntry dist/template-3.0.2.js
+221 silly gunzTarPerm extractEntry dist/template-3.0.2.min.js
+222 silly gunzTarPerm extractEntry build/gh-pages/1.0.0/hogan.js
+223 silly gunzTarPerm extractEntry dist/lodash.underscore.min.js
+224 silly gunzTarPerm extractEntry build/gh-pages/1.0.0/hogan.min.js
+225 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.0/hogan.js
+226 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.0/hogan.min.js
+227 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.3/hogan.js
+228 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.3/hogan.min.js
+229 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.amd.js
+230 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.common.js
+231 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.js
+232 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.min.amd.js
+233 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.min.common.js
+234 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.min.js
+235 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.min.mustache.js
+236 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/hogan-1.0.4.mustache.js
+237 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/template-1.0.4.js
+238 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.4/template-1.0.4.min.js
+239 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore/package.json
+240 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.amd.js
+241 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.common.js
+242 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.js
+243 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.min.amd.js
+244 info preinstall underscore@1.4.4
+245 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore/package.json
+246 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore/package.json
+247 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.min.common.js
+248 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.min.js
+249 silly install resolved []
+250 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+251 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+252 info linkStuff underscore@1.4.4
+253 silly linkStuff underscore@1.4.4 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules as its parent node_modules
+254 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.min.mustache.js
+255 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/hogan-1.0.5.mustache.js
+256 verbose linkBins underscore@1.4.4
+257 verbose linkMans underscore@1.4.4
+258 verbose rebuildBundles underscore@1.4.4
+259 info install underscore@1.4.4
+260 info postinstall underscore@1.4.4
+261 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/underscore-befc02d5554b8edf.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/underscore
+262 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/template-1.0.5.js
+263 silly gunzTarPerm extractEntry build/gh-pages/builds/1.0.5/template-1.0.5.min.js
+264 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.amd.js
+265 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.common.js
+266 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.js
+267 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.min.amd.js
+268 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash/package.json
+269 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.min.common.js
+270 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.min.js
+271 info preinstall lodash@2.4.2
+272 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash/package.json
+273 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.min.mustache.js
+274 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/hogan-2.0.0.mustache.js
+275 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash/package.json
+276 silly install resolved []
+277 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+278 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+279 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/template-2.0.0.js
+280 silly gunzTarPerm extractEntry build/gh-pages/builds/2.0.0/template-2.0.0.min.js
+281 info linkStuff lodash@2.4.2
+282 silly linkStuff lodash@2.4.2 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules as its parent node_modules
+283 verbose linkBins lodash@2.4.2
+284 verbose linkMans lodash@2.4.2
+285 verbose rebuildBundles lodash@2.4.2
+286 info install lodash@2.4.2
+287 info postinstall lodash@2.4.2
+288 silly gunzTarPerm extractEntry build/gh-pages/favicon.ico
+289 silly gunzTarPerm extractEntry build/gh-pages/images/logo.png
+290 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/lodash-f649dde9ea04235c.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/lodash
+291 silly gunzTarPerm extractEntry build/gh-pages/images/noise.png
+292 silly gunzTarPerm extractEntry build/gh-pages/images/small-hogan-icon.png
+293 silly gunzTarPerm extractEntry build/gh-pages/images/stripes.png
+294 silly gunzTarPerm extractEntry build/gh-pages/index.html
+295 silly gunzTarPerm extractEntry build/gh-pages/stylesheets/layout.css
+296 silly gunzTarPerm extractEntry build/gh-pages/stylesheets/skeleton.css
+297 silly gunzTarPerm extractEntry component.json
+298 silly gunzTarPerm extractEntry .gitmodules
+299 silly gunzTarPerm extractEntry inheritance.html
+300 silly gunzTarPerm extractEntry .editorconfig
+301 silly gunzTarPerm extractEntry lib/compiler.js
+302 silly gunzTarPerm extractEntry lib/hogan.js
+303 silly gunzTarPerm extractEntry lib/template.js
+304 silly gunzTarPerm extractEntry test.mustache
+305 silly gunzTarPerm extractEntry .travis.yml
+306 silly gunzTarPerm extractEntry test.html
+307 silly gunzTarPerm extractEntry bin/hulk
+308 silly gunzTarPerm extractEntry web/builds/1.0.0/hogan.js
+309 silly gunzTarPerm extractEntry web/builds/1.0.0/hogan.min.js
+310 silly gunzTarPerm extractEntry web/builds/1.0.3/hogan.js
+311 silly gunzTarPerm extractEntry web/builds/1.0.3/hogan.min.js
+312 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.amd.js
+313 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.common.js
+314 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.js
+315 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.min.amd.js
+316 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.min.common.js
+317 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.min.js
+318 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.min.mustache.js
+319 silly gunzTarPerm extractEntry web/builds/1.0.4/hogan-1.0.4.mustache.js
+320 silly gunzTarPerm extractEntry web/builds/1.0.4/template-1.0.4.js
+321 silly gunzTarPerm extractEntry web/builds/1.0.4/template-1.0.4.min.js
+322 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.amd.js
+323 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.common.js
+324 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.js
+325 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.min.amd.js
+326 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.min.common.js
+327 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.min.js
+328 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.min.mustache.js
+329 silly gunzTarPerm extractEntry web/builds/1.0.5/hogan-1.0.5.mustache.js
+330 silly gunzTarPerm extractEntry web/builds/1.0.5/template-1.0.5.js
+331 silly gunzTarPerm extractEntry web/builds/1.0.5/template-1.0.5.min.js
+332 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.amd.js
+333 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.common.js
+334 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.js
+335 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.min.amd.js
+336 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.min.common.js
+337 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.min.js
+338 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.min.mustache.js
+339 silly gunzTarPerm extractEntry web/builds/2.0.0/hogan-2.0.0.mustache.js
+340 silly gunzTarPerm extractEntry web/builds/2.0.0/template-2.0.0.js
+341 silly gunzTarPerm extractEntry web/builds/2.0.0/template-2.0.0.min.js
+342 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.amd.js
+343 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.min.common.js
+344 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.min.js
+345 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.min.mustache.js
+346 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.mustache.js
+347 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.min.amd.js
+348 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.common.js
+349 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.js
+350 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.min.amd.js
+351 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.min.common.js
+352 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.min.js
+353 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.js
+354 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.min.mustache.js
+355 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan-3.0.0.common.js
+356 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.mustache.js
+357 silly gunzTarPerm extractEntry web/builds/3.0.0/hogan.template-3.0.0.amd.js
+358 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.amd.js
+359 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.min.common.js
+360 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.min.js
+361 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.min.mustache.js
+362 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.mustache.js
+363 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.min.amd.js
+364 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.common.js
+365 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.js
+366 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.min.amd.js
+367 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.min.common.js
+368 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.min.js
+369 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.js
+370 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.min.mustache.js
+371 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan-3.0.1.common.js
+372 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.mustache.js
+373 silly gunzTarPerm extractEntry web/builds/3.0.1/hogan.template-3.0.1.amd.js
+374 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.amd.js
+375 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.common.js
+376 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.js
+377 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.min.amd.js
+378 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.min.common.js
+379 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.min.js
+380 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.min.mustache.js
+381 silly gunzTarPerm extractEntry web/builds/3.0.2/hogan-3.0.2.mustache.js
+382 silly gunzTarPerm extractEntry web/builds/3.0.2/template-3.0.2.js
+383 silly gunzTarPerm extractEntry web/builds/3.0.2/template-3.0.2.min.js
+384 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/package.json
+385 info preinstall hogan.js@3.0.2
+386 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/package.json
+387 silly prepareForInstallMany adding nopt@1.0.10 from hogan.js dependencies
+388 silly prepareForInstallMany adding mkdirp@0.3.0 from hogan.js dependencies
+389 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/package.json
+390 silly cache add args [ 'nopt@1.0.10', null ]
+391 verbose cache add spec nopt@1.0.10
+392 silly cache add args [ 'mkdirp@0.3.0', null ]
+393 verbose cache add spec mkdirp@0.3.0
+394 silly cache add parsed spec Result {
+394 silly cache add   raw: 'nopt@1.0.10',
+394 silly cache add   scope: null,
+394 silly cache add   name: 'nopt',
+394 silly cache add   rawSpec: '1.0.10',
+394 silly cache add   spec: '1.0.10',
+394 silly cache add   type: 'version' }
+395 silly addNamed nopt@1.0.10
+396 verbose addNamed "1.0.10" is a plain semver version for nopt
+397 silly mapToRegistry name nopt
+398 silly mapToRegistry using default registry
+399 silly mapToRegistry registry https://registry.npmjs.org/
+400 silly mapToRegistry uri https://registry.npmjs.org/nopt
+401 verbose addNameVersion registry:https://registry.npmjs.org/nopt not in flight; fetching
+402 silly cache add parsed spec Result {
+402 silly cache add   raw: 'mkdirp@0.3.0',
+402 silly cache add   scope: null,
+402 silly cache add   name: 'mkdirp',
+402 silly cache add   rawSpec: '0.3.0',
+402 silly cache add   spec: '0.3.0',
+402 silly cache add   type: 'version' }
+403 silly addNamed mkdirp@0.3.0
+404 verbose addNamed "0.3.0" is a plain semver version for mkdirp
+405 silly mapToRegistry name mkdirp
+406 silly mapToRegistry using default registry
+407 silly mapToRegistry registry https://registry.npmjs.org/
+408 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+409 verbose addNameVersion registry:https://registry.npmjs.org/mkdirp not in flight; fetching
+410 verbose request uri https://registry.npmjs.org/nopt
+411 verbose request no auth needed
+412 info attempt registry request try #1 at 8:12:26 PM
+413 verbose etag "53NWQ6XY2NLAFB30G2E3W8W60"
+414 http request GET https://registry.npmjs.org/nopt
+415 verbose request uri https://registry.npmjs.org/mkdirp
+416 verbose request no auth needed
+417 info attempt registry request try #1 at 8:12:26 PM
+418 verbose etag "2HJVQQY4Y8EV2HP3VNWH687P1"
+419 http request GET https://registry.npmjs.org/mkdirp
+420 http 304 https://registry.npmjs.org/nopt
+421 verbose headers { date: 'Sat, 28 May 2016 00:12:21 GMT',
+421 verbose headers   via: '1.1 varnish',
+421 verbose headers   'cache-control': 'max-age=300',
+421 verbose headers   etag: '"53NWQ6XY2NLAFB30G2E3W8W60"',
+421 verbose headers   age: '205',
+421 verbose headers   connection: 'keep-alive',
+421 verbose headers   'x-served-by': 'cache-dfw1842-DFW',
+421 verbose headers   'x-cache': 'HIT',
+421 verbose headers   'x-cache-hits': '3',
+421 verbose headers   'x-timer': 'S1464394341.452118,VS0,VE0',
+421 verbose headers   vary: 'Accept-Encoding' }
+422 silly get cb [ 304,
+422 silly get   { date: 'Sat, 28 May 2016 00:12:21 GMT',
+422 silly get     via: '1.1 varnish',
+422 silly get     'cache-control': 'max-age=300',
+422 silly get     etag: '"53NWQ6XY2NLAFB30G2E3W8W60"',
+422 silly get     age: '205',
+422 silly get     connection: 'keep-alive',
+422 silly get     'x-served-by': 'cache-dfw1842-DFW',
+422 silly get     'x-cache': 'HIT',
+422 silly get     'x-cache-hits': '3',
+422 silly get     'x-timer': 'S1464394341.452118,VS0,VE0',
+422 silly get     vary: 'Accept-Encoding' } ]
+423 verbose etag https://registry.npmjs.org/nopt from cache
+424 verbose get saving nopt to /Users/adamsmallcomb/.npm/registry.npmjs.org/nopt/.cache.json
+425 http 200 https://registry.npmjs.org/mkdirp
+426 verbose headers { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+426 verbose headers   etag: '"49NNM1W5LG8VL5C772Y5YGQ5X"',
+426 verbose headers   'content-type': 'application/json',
+426 verbose headers   'content-encoding': 'gzip',
+426 verbose headers   'cache-control': 'max-age=300',
+426 verbose headers   'content-length': '4826',
+426 verbose headers   'accept-ranges': 'bytes',
+426 verbose headers   date: 'Sat, 28 May 2016 00:12:21 GMT',
+426 verbose headers   via: '1.1 varnish',
+426 verbose headers   age: '40',
+426 verbose headers   connection: 'keep-alive',
+426 verbose headers   'x-served-by': 'cache-dfw1835-DFW',
+426 verbose headers   'x-cache': 'HIT',
+426 verbose headers   'x-cache-hits': '1',
+426 verbose headers   'x-timer': 'S1464394341.452211,VS0,VE0',
+426 verbose headers   vary: 'Accept-Encoding' }
+427 silly get cb [ 200,
+427 silly get   { server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+427 silly get     etag: '"49NNM1W5LG8VL5C772Y5YGQ5X"',
+427 silly get     'content-type': 'application/json',
+427 silly get     'content-encoding': 'gzip',
+427 silly get     'cache-control': 'max-age=300',
+427 silly get     'content-length': '4826',
+427 silly get     'accept-ranges': 'bytes',
+427 silly get     date: 'Sat, 28 May 2016 00:12:21 GMT',
+427 silly get     via: '1.1 varnish',
+427 silly get     age: '40',
+427 silly get     connection: 'keep-alive',
+427 silly get     'x-served-by': 'cache-dfw1835-DFW',
+427 silly get     'x-cache': 'HIT',
+427 silly get     'x-cache-hits': '1',
+427 silly get     'x-timer': 'S1464394341.452211,VS0,VE0',
+427 silly get     vary: 'Accept-Encoding' } ]
+428 verbose get saving mkdirp to /Users/adamsmallcomb/.npm/registry.npmjs.org/mkdirp/.cache.json
+429 silly mapToRegistry name mkdirp
+430 silly mapToRegistry using default registry
+431 silly mapToRegistry registry https://registry.npmjs.org/
+432 silly mapToRegistry uri https://registry.npmjs.org/mkdirp
+433 verbose addRemoteTarball https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz not in flight; adding
+434 verbose addRemoteTarball [ 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz',
+434 verbose addRemoteTarball   '1bbf5ab1ba827af23575143490426455f481fe1e' ]
+435 silly cache afterAdd nopt@1.0.10
+436 verbose afterAdd /Users/adamsmallcomb/.npm/nopt/1.0.10/package/package.json not in flight; writing
+437 info retry fetch attempt 1 at 8:12:27 PM
+438 info attempt registry request try #1 at 8:12:27 PM
+439 http fetch GET https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+440 verbose afterAdd /Users/adamsmallcomb/.npm/nopt/1.0.10/package/package.json written
+441 http fetch 200 https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz
+442 silly fetchAndShaCheck shasum 1bbf5ab1ba827af23575143490426455f481fe1e
+443 verbose addTmpTarball /tmp/npm-1888-98aa5665/registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz not in flight; adding
+444 verbose addTmpTarball already have metadata; skipping unpack for mkdirp@0.3.0
+445 silly cache afterAdd mkdirp@0.3.0
+446 verbose afterAdd /Users/adamsmallcomb/.npm/mkdirp/0.3.0/package/package.json not in flight; writing
+447 verbose afterAdd /Users/adamsmallcomb/.npm/mkdirp/0.3.0/package/package.json written
+448 silly install resolved [ { name: 'nopt',
+448 silly install resolved     version: '1.0.10',
+448 silly install resolved     description: 'Option parsing for Node, supporting types, shorthands, etc. Used by npm.',
+448 silly install resolved     author:
+448 silly install resolved      { name: 'Isaac Z. Schlueter',
+448 silly install resolved        email: 'i@izs.me',
+448 silly install resolved        url: 'http://blog.izs.me/' },
+448 silly install resolved     main: 'lib/nopt.js',
+448 silly install resolved     scripts: { test: 'node lib/nopt.js' },
+448 silly install resolved     repository: { type: 'git', url: 'git+ssh://git@github.com/isaacs/nopt.git' },
+448 silly install resolved     bin: { nopt: './bin/nopt.js' },
+448 silly install resolved     license:
+448 silly install resolved      { type: 'MIT',
+448 silly install resolved        url: 'https://github.com/isaacs/nopt/raw/master/LICENSE' },
+448 silly install resolved     dependencies: { abbrev: '1' },
+448 silly install resolved     readme: 'If you want to write an option parser, and have it be good, there are\ntwo ways to do it.  The Right Way, and the Wrong Way.\n\nThe Wrong Way is to sit down and write an option parser.  We\'ve all done\nthat.\n\nThe Right Way is to write some complex configurable program with so many\noptions that you go half-insane just trying to manage them all, and put\nit off with duct-tape solutions until you see exactly to the core of the\nproblem, and finally snap and write an awesome option parser.\n\nIf you want to write an option parser, don\'t write an option parser.\nWrite a package manager, or a source control system, or a service\nrestarter, or an operating system.  You probably won\'t end up with a\ngood one of those, but if you don\'t give up, and you are relentless and\ndiligent enough in your procrastination, you may just end up with a very\nnice option parser.\n\n## USAGE\n\n    // my-program.js\n    var nopt = require("nopt")\n      , Stream = require("stream").Stream\n      , path = require("path")\n      , knownOpts = { "foo" : [String, null]\n                    , "bar" : [Stream, Number]\n                    , "baz" : path\n                    , "bloo" : [ "big", "medium", "small" ]\n                    , "flag" : Boolean\n                    , "pick" : Boolean\n                    , "many" : [String, Array]\n                    }\n      , shortHands = { "foofoo" : ["--foo", "Mr. Foo"]\n                     , "b7" : ["--bar", "7"]\n                     , "m" : ["--bloo", "medium"]\n                     , "p" : ["--pick"]\n                     , "f" : ["--flag"]\n                     }\n                 // everything is optional.\n                 // knownOpts and shorthands default to {}\n                 // arg list defaults to process.argv\n                 // slice defaults to 2\n      , parsed = nopt(knownOpts, shortHands, process.argv, 2)\n    console.log(parsed)\n\nThis would give you support for any of the following:\n\n```bash\n$ node my-program.js --foo "blerp" --no-flag\n{ "foo" : "blerp", "flag" : false }\n\n$ node my-program.js ---bar 7 --foo "Mr. Hand" --flag\n{ bar: 7, foo: "Mr. Hand", flag: true }\n\n$ node my-program.js --foo "blerp" -f -----p\n{ foo: "blerp", flag: true, pick: true }\n\n$ node my-program.js -fp --foofoo\n{ foo: "Mr. Foo", flag: true, pick: true }\n\n$ node my-program.js --foofoo -- -fp  # -- stops the flag parsing.\n{ foo: "Mr. Foo", argv: { remain: ["-fp"] } }\n\n$ node my-program.js --blatzk 1000 -fp # unknown opts are ok.\n{ blatzk: 1000, flag: true, pick: true }\n\n$ node my-program.js --blatzk true -fp # but they need a value\n{ blatzk: true, flag: true, pick: true }\n\n$ node my-program.js --no-blatzk -fp # unless they start with "no-"\n{ blatzk: false, flag: true, pick: true }\n\n$ node my-program.js --baz b/a/z # known paths are resolved.\n{ baz: "/Users/isaacs/b/a/z" }\n\n# if Array is one of the types, then it can take many\n# values, and will always be an array.  The other types provided\n# specify what types are allowed in the list.\n\n$ node my-program.js --many 1 --many null --many foo\n{ many: ["1", "null", "foo"] }\n\n$ node my-program.js --many foo\n{ many: ["foo"] }\n```\n\nRead the tests at the bottom of `lib/nopt.js` for more examples of\nwhat this puppy can do.\n\n## Types\n\nThe following types are supported, and defined on `nopt.typeDefs`\n\n* String: A normal string.  No parsing is done.\n* path: A file system path.  Gets resolved against cwd if not absolute.\n* url: A url.  If it doesn\'t parse, it isn\'t accepted.\n* Number: Must be numeric.\n* Date: Must parse as a date. If it does, and `Date` is one of the options,\n  then it will return a Date object, not a string.\n* Boolean: Must be either `true` or `false`.  If an option is a boolean,\n  then it does not need a value, and its presence will imply `true` as\n  the value.  To negate boolean flags, do `--no-whatever` or `--whatever\n  false`\n* NaN: Means that the option is strictly not allowed.  Any value will\n  fail.\n* Stream: An object matching the "Stream" class in node.  Valuable\n  for use when validating programmatically.  (npm uses this to let you\n  supply any WriteStream on the `outfd` and `logfd` config options.)\n* Array: If `Array` is specified as one of the types, then the value\n  will be parsed as a list of options.  This means that multiple values\n  can be specified, and that the value will always be an array.\n\nIf a type is an array of values not on this list, then those are\nconsidered valid values.  For instance, in the example above, the\n`--bloo` option can only be one of `"big"`, `"medium"`, or `"small"`,\nand any other value will be rejected.\n\nWhen parsing unknown fields, `"true"`, `"false"`, and `"null"` will be\ninterpreted as their JavaScript equivalents, and numeric values will be\ninterpreted as a number.\n\nYou can also mix types and values, or multiple types, in a list.  For\ninstance `{ blah: [Number, null] }` would allow a value to be set to\neither a Number or null.\n\nTo define a new type, add it to `nopt.typeDefs`.  Each item in that\nhash is an object with a `type` member and a `validate` method.  The\n`type` member is an object that matches what goes in the type list.  The\n`validate` method is a function that gets called with `validate(data,\nkey, val)`.  Validate methods should assign `data[key]` to the valid\nvalue of `val` if it can be handled properly, or return boolean\n`false` if it cannot.\n\nYou can also call `nopt.clean(data, types, typeDefs)` to clean up a\nconfig object and remove its invalid properties.\n\n## Error Handling\n\nBy default, nopt outputs a warning to standard error when invalid\noptions are found.  You can change this behavior by assigning a method\nto `nopt.invalidHandler`.  This method will be called with\nthe offending `nopt.invalidHandler(key, val, types)`.\n\nIf no `nopt.invalidHandler` is assigned, then it will console.error\nits whining.  If it is assigned to boolean `false` then the warning is\nsuppressed.\n\n## Abbreviations\n\nYes, they are supported.  If you define options like this:\n\n```javascript\n{ "foolhardyelephants" : Boolean\n, "pileofmonkeys" : Boolean }\n```\n\nThen this will work:\n\n```bash\nnode program.js --foolhar --pil\nnode program.js --no-f --pileofmon\n# etc.\n```\n\n## Shorthands\n\nShorthands are a hash of shorter option names to a snippet of args that\nthey expand to.\n\nIf multiple one-character shorthands are all combined, and the\ncombination does not unambiguously match any other option or shorthand,\nthen they will be broken up into their constituent parts.  For example:\n\n```json\n{ "s" : ["--loglevel", "silent"]\n, "g" : "--global"\n, "f" : "--force"\n, "p" : "--parseable"\n, "l" : "--long"\n}\n```\n\n```bash\nnpm ls -sgflp\n# just like doing this:\nnpm ls --loglevel silent --global --force --long --parseable\n```\n\n## The Rest of the args\n\nThe config object returned by nopt is given a special member called\n`argv`, which is an object with the following fields:\n\n* `remain`: The remaining args after all the parsing has occurred.\n* `original`: The args as they originally appeared.\n* `cooked`: The args after flags and shorthands are expanded.\n\n## Slicing\n\nNode programs are called with more or less the exact argv as it appears\nin C land, after the v8 and node-specific options have been plucked off.\nAs such, `argv[0]` is always `node` and `argv[1]` is always the\nJavaScript program being run.\n\nThat\'s usually not very useful to you.  So they\'re sliced off by\ndefault.  If you want them, then you can pass in `0` as the last\nargument, or any other number that you\'d like to slice off the start of\nthe list.\n',
+448 silly install resolved     readmeFilename: 'README.md',
+448 silly install resolved     bugs: { url: 'https://github.com/isaacs/nopt/issues' },
+448 silly install resolved     homepage: 'https://github.com/isaacs/nopt#readme',
+448 silly install resolved     _id: 'nopt@1.0.10',
+448 silly install resolved     _from: 'nopt@1.0.10' },
+448 silly install resolved   { name: 'mkdirp',
+448 silly install resolved     description: 'Recursively mkdir, like `mkdir -p`',
+448 silly install resolved     version: '0.3.0',
+448 silly install resolved     author:
+448 silly install resolved      { name: 'James Halliday',
+448 silly install resolved        email: 'mail@substack.net',
+448 silly install resolved        url: 'http://substack.net' },
+448 silly install resolved     main: './index',
+448 silly install resolved     keywords: [ 'mkdir', 'directory' ],
+448 silly install resolved     repository:
+448 silly install resolved      { type: 'git',
+448 silly install resolved        url: 'git://github.com/substack/node-mkdirp.git' },
+448 silly install resolved     scripts: { test: 'tap test/*.js' },
+448 silly install resolved     devDependencies: { tap: '0.0.x' },
+448 silly install resolved     license: 'MIT/X11',
+448 silly install resolved     engines: { node: '*' },
+448 silly install resolved     _npmUser: { name: 'substack', email: 'mail@substack.net' },
+448 silly install resolved     _id: 'mkdirp@0.3.0',
+448 silly install resolved     dependencies: {},
+448 silly install resolved     _engineSupported: true,
+448 silly install resolved     _npmVersion: '1.0.106',
+448 silly install resolved     _nodeVersion: 'v0.4.12',
+448 silly install resolved     _defaultsLoaded: true,
+448 silly install resolved     dist:
+448 silly install resolved      { shasum: '1bbf5ab1ba827af23575143490426455f481fe1e',
+448 silly install resolved        tarball: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz' },
+448 silly install resolved     maintainers: [ [Object] ],
+448 silly install resolved     directories: {},
+448 silly install resolved     _shasum: '1bbf5ab1ba827af23575143490426455f481fe1e',
+448 silly install resolved     _resolved: 'https://registry.npmjs.org/mkdirp/-/mkdirp-0.3.0.tgz',
+448 silly install resolved     _from: 'mkdirp@0.3.0' } ]
+449 info install nopt@1.0.10 into /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+450 info install mkdirp@0.3.0 into /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+451 info installOne nopt@1.0.10
+452 verbose installOne of nopt to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js not in flight; installing
+453 info installOne mkdirp@0.3.0
+454 verbose installOne of mkdirp to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js not in flight; installing
+455 verbose lock using /Users/adamsmallcomb/.npm/_locks/nopt-c9816a0de44faff5.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+456 verbose lock using /Users/adamsmallcomb/.npm/_locks/mkdirp-b88ee01728e80380.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+457 silly install write writing nopt 1.0.10 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+458 silly install write writing mkdirp 0.3.0 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+459 verbose unbuild node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+460 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+461 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+462 verbose tar unpack /Users/adamsmallcomb/.npm/nopt/1.0.10/package.tgz
+463 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+464 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt is being purged
+465 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+466 silly gunzTarPerm modes [ '755', '644' ]
+467 verbose unbuild node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+468 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+469 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+470 verbose tar unpack /Users/adamsmallcomb/.npm/mkdirp/0.3.0/package.tgz
+471 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+472 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp is being purged
+473 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+474 silly gunzTarPerm extractEntry package.json
+475 silly gunzTarPerm modes [ '755', '644' ]
+476 silly gunzTarPerm extractEntry .npmignore
+477 silly gunzTarPerm extractEntry README.md
+478 silly gunzTarPerm extractEntry index.js
+479 silly gunzTarPerm extractEntry package.json
+480 silly gunzTarPerm extractEntry .gitignore.rej
+481 silly gunzTarPerm extractEntry LICENSE
+482 silly gunzTarPerm extractEntry bin/nopt.js
+483 silly gunzTarPerm extractEntry examples/my-program.js
+484 silly gunzTarPerm extractEntry lib/nopt.js
+485 silly gunzTarPerm extractEntry .gitignore.orig
+486 silly gunzTarPerm extractEntry README.markdown
+487 silly gunzTarPerm extractEntry LICENSE
+488 silly gunzTarPerm extractEntry .gitignore
+489 silly gunzTarPerm extractEntry examples/pow.js.rej
+490 silly gunzTarPerm extractEntry examples/pow.js
+491 silly gunzTarPerm extractEntry examples/pow.js.orig
+492 silly gunzTarPerm extractEntry test/perm.js
+493 silly gunzTarPerm extractEntry test/umask_sync.js
+494 silly gunzTarPerm extractEntry test/perm_sync.js
+495 silly gunzTarPerm extractEntry test/race.js
+496 silly gunzTarPerm extractEntry test/rel.js
+497 silly gunzTarPerm extractEntry test/mkdirp.js
+498 silly gunzTarPerm extractEntry test/clobber.js
+499 silly gunzTarPerm extractEntry test/umask.js
+500 silly gunzTarPerm extractEntry test/sync.js
+501 silly gunzTarPerm extractEntry test/chmod.js
+502 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/package.json
+503 info preinstall nopt@1.0.10
+504 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/package.json
+505 silly prepareForInstallMany adding abbrev@1 from nopt dependencies
+506 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/package.json
+507 silly cache add args [ 'abbrev@1', null ]
+508 verbose cache add spec abbrev@1
+509 silly cache add parsed spec Result {
+509 silly cache add   raw: 'abbrev@1',
+509 silly cache add   scope: null,
+509 silly cache add   name: 'abbrev',
+509 silly cache add   rawSpec: '1',
+509 silly cache add   spec: '>=1.0.0 <2.0.0',
+509 silly cache add   type: 'range' }
+510 silly addNamed abbrev@>=1.0.0 <2.0.0
+511 verbose addNamed ">=1.0.0 <2.0.0" is a valid semver range for abbrev
+512 silly addNameRange { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: false }
+513 silly mapToRegistry name abbrev
+514 silly mapToRegistry using default registry
+515 silly mapToRegistry registry https://registry.npmjs.org/
+516 silly mapToRegistry uri https://registry.npmjs.org/abbrev
+517 verbose addNameRange registry:https://registry.npmjs.org/abbrev not in flight; fetching
+518 verbose request uri https://registry.npmjs.org/abbrev
+519 verbose request no auth needed
+520 info attempt registry request try #1 at 8:12:27 PM
+521 verbose etag "5COR5F08LNF679JR9VE4E6VZW"
+522 http request GET https://registry.npmjs.org/abbrev
+523 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp/package.json
+524 info preinstall mkdirp@0.3.0
+525 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp/package.json
+526 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp/package.json
+527 silly install resolved []
+528 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+529 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+530 info linkStuff mkdirp@0.3.0
+531 silly linkStuff mkdirp@0.3.0 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules as its parent node_modules
+532 verbose linkBins mkdirp@0.3.0
+533 verbose linkMans mkdirp@0.3.0
+534 verbose rebuildBundles mkdirp@0.3.0
+535 info install mkdirp@0.3.0
+536 info postinstall mkdirp@0.3.0
+537 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/mkdirp-b88ee01728e80380.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/mkdirp
+538 http 304 https://registry.npmjs.org/abbrev
+539 verbose headers { date: 'Sat, 28 May 2016 00:12:21 GMT',
+539 verbose headers   via: '1.1 varnish',
+539 verbose headers   'cache-control': 'max-age=300',
+539 verbose headers   etag: '"5COR5F08LNF679JR9VE4E6VZW"',
+539 verbose headers   age: '80',
+539 verbose headers   connection: 'keep-alive',
+539 verbose headers   'x-served-by': 'cache-dfw1844-DFW',
+539 verbose headers   'x-cache': 'HIT',
+539 verbose headers   'x-cache-hits': '3',
+539 verbose headers   'x-timer': 'S1464394341.986307,VS0,VE0',
+539 verbose headers   vary: 'Accept-Encoding' }
+540 silly get cb [ 304,
+540 silly get   { date: 'Sat, 28 May 2016 00:12:21 GMT',
+540 silly get     via: '1.1 varnish',
+540 silly get     'cache-control': 'max-age=300',
+540 silly get     etag: '"5COR5F08LNF679JR9VE4E6VZW"',
+540 silly get     age: '80',
+540 silly get     connection: 'keep-alive',
+540 silly get     'x-served-by': 'cache-dfw1844-DFW',
+540 silly get     'x-cache': 'HIT',
+540 silly get     'x-cache-hits': '3',
+540 silly get     'x-timer': 'S1464394341.986307,VS0,VE0',
+540 silly get     vary: 'Accept-Encoding' } ]
+541 verbose etag https://registry.npmjs.org/abbrev from cache
+542 verbose get saving abbrev to /Users/adamsmallcomb/.npm/registry.npmjs.org/abbrev/.cache.json
+543 silly addNameRange number 2 { name: 'abbrev', range: '>=1.0.0 <2.0.0', hasData: true }
+544 silly addNameRange versions [ 'abbrev', [ '1.0.3', '1.0.4', '1.0.5', '1.0.6', '1.0.7' ] ]
+545 silly addNamed abbrev@1.0.7
+546 verbose addNamed "1.0.7" is a plain semver version for abbrev
+547 silly cache afterAdd abbrev@1.0.7
+548 verbose afterAdd /Users/adamsmallcomb/.npm/abbrev/1.0.7/package/package.json not in flight; writing
+549 verbose afterAdd /Users/adamsmallcomb/.npm/abbrev/1.0.7/package/package.json written
+550 silly install resolved [ { name: 'abbrev',
+550 silly install resolved     version: '1.0.7',
+550 silly install resolved     description: 'Like ruby\'s abbrev module, but in js',
+550 silly install resolved     author: { name: 'Isaac Z. Schlueter', email: 'i@izs.me' },
+550 silly install resolved     main: 'abbrev.js',
+550 silly install resolved     scripts: { test: 'tap test.js --cov' },
+550 silly install resolved     repository:
+550 silly install resolved      { type: 'git',
+550 silly install resolved        url: 'git+ssh://git@github.com/isaacs/abbrev-js.git' },
+550 silly install resolved     license: 'ISC',
+550 silly install resolved     devDependencies: { tap: '^1.2.0' },
+550 silly install resolved     readme: '# abbrev-js\n\nJust like [ruby\'s Abbrev](http://apidock.com/ruby/Abbrev).\n\nUsage:\n\n    var abbrev = require("abbrev");\n    abbrev("foo", "fool", "folding", "flop");\n    \n    // returns:\n    { fl: \'flop\'\n    , flo: \'flop\'\n    , flop: \'flop\'\n    , fol: \'folding\'\n    , fold: \'folding\'\n    , foldi: \'folding\'\n    , foldin: \'folding\'\n    , folding: \'folding\'\n    , foo: \'foo\'\n    , fool: \'fool\'\n    }\n\nThis is handy for command-line scripts, or other cases where you want to be able to accept shorthands.\n',
+550 silly install resolved     readmeFilename: 'README.md',
+550 silly install resolved     bugs: { url: 'https://github.com/isaacs/abbrev-js/issues' },
+550 silly install resolved     homepage: 'https://github.com/isaacs/abbrev-js#readme',
+550 silly install resolved     _id: 'abbrev@1.0.7',
+550 silly install resolved     _from: 'abbrev@>=1.0.0 <2.0.0' } ]
+551 info install abbrev@1.0.7 into /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+552 info installOne abbrev@1.0.7
+553 verbose installOne of abbrev to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt not in flight; installing
+554 verbose lock using /Users/adamsmallcomb/.npm/_locks/abbrev-a2da4a4ae82716bf.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+555 silly install write writing abbrev 1.0.7 to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+556 verbose unbuild node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+557 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev is being purged from base /Users/adamsmallcomb/Projects/EM-Trainer
+558 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+559 verbose tar unpack /Users/adamsmallcomb/.npm/abbrev/1.0.7/package.tgz
+560 verbose tar unpacking to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+561 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev is being purged
+562 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+563 silly gunzTarPerm modes [ '755', '644' ]
+564 silly gunzTarPerm extractEntry package.json
+565 silly gunzTarPerm extractEntry .npmignore
+566 silly gunzTarPerm extractEntry README.md
+567 silly gunzTarPerm extractEntry LICENSE
+568 silly gunzTarPerm extractEntry abbrev.js
+569 silly gunzTarPerm extractEntry test.js
+570 silly gunzTarPerm extractEntry .travis.yml
+571 silly gunzTarPerm extractEntry CONTRIBUTING.md
+572 verbose write writing to /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev/package.json
+573 info preinstall abbrev@1.0.7
+574 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev/package.json
+575 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev/package.json
+576 silly install resolved []
+577 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+578 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+579 info linkStuff abbrev@1.0.7
+580 silly linkStuff abbrev@1.0.7 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules as its parent node_modules
+581 verbose linkBins abbrev@1.0.7
+582 verbose linkMans abbrev@1.0.7
+583 verbose rebuildBundles abbrev@1.0.7
+584 info install abbrev@1.0.7
+585 info postinstall abbrev@1.0.7
+586 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/abbrev-a2da4a4ae82716bf.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt/node_modules/abbrev
+587 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+588 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+589 info linkStuff nopt@1.0.10
+590 silly linkStuff nopt@1.0.10 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules as its parent node_modules
+591 verbose linkBins nopt@1.0.10
+592 verbose link bins [ { nopt: './bin/nopt.js' },
+592 verbose link bins   '/Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/.bin',
+592 verbose link bins   false ]
+593 verbose linkMans nopt@1.0.10
+594 verbose rebuildBundles nopt@1.0.10
+595 verbose rebuildBundles [ 'abbrev' ]
+596 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/.bin/nopt is being purged
+597 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/.bin/nopt
+598 info install nopt@1.0.10
+599 info postinstall nopt@1.0.10
+600 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/nopt-c9816a0de44faff5.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js/node_modules/nopt
+601 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+602 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+603 info linkStuff hogan.js@3.0.2
+604 silly linkStuff hogan.js@3.0.2 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules as its parent node_modules
+605 verbose linkBins hogan.js@3.0.2
+606 verbose link bins [ { hulk: './bin/hulk' },
+606 verbose link bins   '/Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/.bin',
+606 verbose link bins   false ]
+607 verbose linkMans hogan.js@3.0.2
+608 verbose rebuildBundles hogan.js@3.0.2
+609 verbose rebuildBundles [ '.bin', 'mkdirp', 'nopt' ]
+610 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/.bin/hulk is being purged
+611 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/.bin/hulk
+612 info install hogan.js@3.0.2
+613 info postinstall hogan.js@3.0.2
+614 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/hogan-js-323ae53b8bf59f68.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/node_modules/hogan.js
+615 verbose about to build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+616 info build /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+617 info linkStuff grunt-hogan@0.3.0
+618 silly linkStuff grunt-hogan@0.3.0 has /Users/adamsmallcomb/Projects/EM-Trainer/node_modules as its parent node_modules
+619 verbose linkBins grunt-hogan@0.3.0
+620 verbose link bins [ { 'grunt-hogan': 'bin/grunt-hogan' },
+620 verbose link bins   '/Users/adamsmallcomb/Projects/EM-Trainer/node_modules/.bin',
+620 verbose link bins   false ]
+621 verbose linkMans grunt-hogan@0.3.0
+622 verbose rebuildBundles grunt-hogan@0.3.0
+623 verbose rebuildBundles [ '.bin', 'hogan.js', 'lodash', 'underscore' ]
+624 silly gentlyRm /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/.bin/grunt-hogan is being purged
+625 verbose gentlyRm don't care about contents; nuking /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/.bin/grunt-hogan
+626 info install grunt-hogan@0.3.0
+627 info postinstall grunt-hogan@0.3.0
+628 verbose readDependencies loading dependencies from /Users/adamsmallcomb/Projects/EM-Trainer/package.json
+629 verbose targetResolver reading package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt/package.json
+630 verbose targetResolver reading package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-contrib-watch/package.json
+631 verbose targetResolver reading package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan/package.json
+632 verbose targetResolver reading package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/.bin/grunt/package.json
+633 verbose targetResolver reading package data from /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/.bin/grunt-hogan/package.json
+634 verbose already installed skipping grunt@~0.4.5 /Users/adamsmallcomb/Projects/EM-Trainer
+635 silly install resolved []
+636 verbose unlock done using /Users/adamsmallcomb/.npm/_locks/grunt-hogan-e0a1f1823a52ef2c.lock for /Users/adamsmallcomb/Projects/EM-Trainer/node_modules/grunt-hogan
+637 verbose validateInstall loading /Users/adamsmallcomb/Projects/EM-Trainer/package.json for validation
+638 verbose stack Error: The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+638 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:125:32
+638 verbose stack     at /usr/local/lib/node_modules/npm/lib/install.js:268:7
+638 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:142:5
+638 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+638 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+638 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+638 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+638 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+638 verbose stack     at cb (/usr/local/lib/node_modules/npm/node_modules/slide/lib/async-map.js:47:24)
+638 verbose stack     at /usr/local/lib/node_modules/npm/node_modules/read-installed/read-installed.js:263:14
+639 verbose cwd /Users/adamsmallcomb/Projects/EM-Trainer
+640 error Darwin 15.4.0
+641 error argv "/usr/local/bin/node" "/usr/local/bin/npm" "install" "grunt-hogan"
+642 error node v4.2.2
+643 error npm  v2.14.7
+644 error code EPEERINVALID
+645 error peerinvalid The package grunt@1.0.1 does not satisfy its siblings' peerDependencies requirements!
+645 error peerinvalid Peer grunt-hogan@0.3.0 wants grunt@~0.4.5
+646 verbose exit [ 1, true ]

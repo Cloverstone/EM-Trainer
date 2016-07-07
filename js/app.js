@@ -30,6 +30,7 @@ pages.home = {load: function(){
 
 
 	Mousetrap.bind('4', function() { sendCommand('on4'); });
+	Mousetrap.bind('9', function() { sendCommand('on4'); });
 	Mousetrap.bind('4', function() { sendCommand('off4'); }, 'keyup');
 
 	Mousetrap.bind('0', function() { chrome.serial.disconnect(connectionId, function (){
@@ -50,9 +51,25 @@ pages.stepper = {load: function(){
 pages.speaker = {load: function(){
 		contentManager.show( new speakerView());	
 }}
+pages.solenoid = {load: function(){
+		contentManager.show( new solenoidView());	
+}}
+pages.meter = {load: function(){
+		contentManager.show( new meterView());	
+}}
+
+pages.brushed = {load: function(){
+		contentManager.show( new brushedView());	
+}}
 
 
+pages.relay = {load: function(){
+		contentManager.show( new relayView());	
+}}
 
+pages.dash = {load: function(){
+		contentManager.show( new dashView());	
+}}
 
 
 mainView = Backbone.View.extend({

@@ -1,17 +1,31 @@
 <div class="container" style="width:200px">
-	<div class="row">
-		<div class="col-sm-12">Interval:{{interval}}</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12">Direction:{{direction}}</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12">State:{{state}}</div>
-	</div>
-	<div class="row">
-		<div class="col-sm-12">Half Step:{{half_step}}</div>
-	</div>
-	<div class="row">
+	<h4> Status - <small>Stepper</small></h4>
+  <ul class="icon-list">
+    <li>
+      <i class="fa fa-clock-o text-warning fa-lg pr10"></i>
+      <b> Interval:</b> {{interval}}
+    </li>
+    <li>
+      <i class="fa fa-rotate-{{#direction}}left{{/direction}}{{^direction}}right{{/direction}} text-info fa-lg pr10"></i>
+      <b> Direction:</b> {{direction}}
+    </li>
+    <li>
+      <i class="fa fa-dot-circle-o text-warning fa-lg pr10"></i>
+      <b> State:</b> {{state}}
+    </li>
+    <li>
+      <i class="fa fa-magnet text-success fa-lg pr10"></i>
+      <b> Hall Effect:</b> {{reading}}
+    </li>
+    <li>
+      <i class="fa fa-arrows-alt text-{{#half_step}}success{{/half_step}}{{^half_step}}muted{{/half_step}} fa-lg pr10"></i>
+<!--       <span class="fa-stack fa-lg">
+			  <i class="fa fa-arrows fa-stack-1x"></i>
+			  <i class="fa fa-arrows-alt fa-stack-1x"></i>
+			</span> -->
+      <b> Half Step:</b> {{half_step}}
+    </li>
+  </ul>
 
 {{#coils}}
 	<span style="font-size: 50px;padding: 20px;" class="col-sm-6 glyphicon glyphicon-record text-{{#status}}success{{/status}}{{^status}}muted{{/status}}"></span>

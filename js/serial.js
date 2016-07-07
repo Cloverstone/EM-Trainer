@@ -6,7 +6,17 @@ liveView = Backbone.View.extend({
 });
 
 processString = function(results) {
-  $('.sidebar-left-content').html(render('side', JSON.parse(results) ));
+  var data = JSON.parse(results);
+  data.reading = data.reading-512;
+
+  data.polarity = "North";
+  if(data.reading >0) {
+    data.polarity = "South";
+  }
+  data.reading = Math.abs(data.reading) * 1000/1024;
+  data.reading = data.reading.toFixed(1)+"g";
+
+  $('.sidebar-left-content').html(render('side', data ));
  //$('.sidebar-left-content').html('<center><h1>'+results+'</h1></center>');
 }
 

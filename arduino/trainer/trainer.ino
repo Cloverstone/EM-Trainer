@@ -2,6 +2,8 @@
 #define CoilAB 11
 #define CoilBA 12
 #define CoilBB 13
+#define Power 9
+#define HallEffect A0
 #define FORWARD 1
 #define BACKWARD -1
 #define STOPPED false
@@ -21,6 +23,7 @@ int action = STOPPED;
 int direction = FORWARD;
 bool halfStep;
 int position = 0;
+int mode = 0;
 
 void step(int dir = direction){
   if(!halfStep){
@@ -80,8 +83,10 @@ void step(int dir = direction){
   }
 }
 
-void play(int melody[], int pace, int noteDurations[]){
-  int size = sizeof(melody) / sizeof(int);
+void play(int melody[], int pace, int noteDurations[],int size){
+//  int size = sizeof(&melody) / sizeof(int);
+//    Serial.println(String(size));
+//size =8;
    for (int thisNote = 0; thisNote < size; thisNote++) {
     if(action == RUNNING){
       // to calculate the note duration, take one second
@@ -97,7 +102,7 @@ void play(int melody[], int pace, int noteDurations[]){
       // stop the tone playing:
       noTone(CoilAA);
     }else{
-      break;
+      break;  
     }
   } 
 }
@@ -129,6 +134,8 @@ void setup() {
   pinMode(CoilAB, OUTPUT);      // sets the digital pin as output
   pinMode(CoilBA, OUTPUT);      // sets the digital pin as output
   pinMode(CoilBB, OUTPUT);      // sets the digital pin as output
+  pinMode(HallEffect, INPUT);      // sets the digital pin as output
+
 }
 
 void status(){  
@@ -136,14 +143,15 @@ void status(){
   +",\"direction\":"+String(direction)
   +",\"half_step\":"+String(halfStep)
   +",\"state\":"+String(action)
-  +",\"coils\":[{\"status\":"+digitalRead(CoilAA)+"},{\"status\":"+digitalRead(CoilBA)+"},{\"status\":"+digitalRead(CoilAB)+"},{\"status\":"+digitalRead(CoilBB)+"}]}");
+  +",\"reading\":"+String(analogRead(HallEffect))
+  +",\"coils\":[{\"status\":"+String(digitalRead(CoilAA))+"},{\"status\":"+String(digitalRead(CoilBA))+"},{\"status\":"+String(digitalRead(CoilAB))+"},{\"status\":"+String(digitalRead(CoilBB))+"}]}");
 }
  
 
  
 
 void loop() {
-  if(action == RUNNING){
+  if(action == RUNNING && mode == 0){
         step();
         wait();
   }
@@ -170,9 +178,12 @@ void loop() {
     }else if(inputString == "r"){
       direction = BACKWARD;
     }else if(inputString == "start"){
+      mode = 0;
       action = RUNNING;
     }else if(inputString == "stop"){
-      stop();
+      stop(); 
+    }else if(inputString.startsWith("power")){
+      analogWrite(Power, coils[inputString.substring(5,8).toInt()-1]);
     }else if(inputString.startsWith("on")){
       digitalWrite(coils[inputString.substring(2,3).toInt()-1], HIGH);
     }else if(inputString.startsWith("off")){
@@ -182,26 +193,27 @@ void loop() {
     }else if(inputString.startsWith("play")){
       
       action = RUNNING;
+      mode=1;
       int song = inputString.substring(5,6).toInt();
       //quick and dirty figure out how to do this better on arduino
       switch(song){
         case 1:
-          play(melody, pace, noteDurations);
+          play(melody0, pace0, noteDurations0,sizeof(melody0) / sizeof(int));
           break;
         case 2:
-          play(melody1, pace1, noteDurations1);
+          play(melody1, pace1, noteDurations1,sizeof(melody1) / sizeof(int));
           break;
         case 3:
-          play(melody2, pace1, noteDurations2);
+          play(melody2, pace1, noteDurations2,sizeof(melody2) / sizeof(int));
           break;
         case 4:
-          play(melody3, pace1, noteDurations3);
+          play(melody3, pace1, noteDurations3,sizeof(melody3) / sizeof(int));
           break;
-        case 5:
-          play(melody4, pace1, noteDurations4);
-          break;
+//        case 5:
+//          play(melody4, pace1, noteDurations4);
+//          break;
       }
-      
+//      
       action = STOPPED;
     }else{
       stop();
