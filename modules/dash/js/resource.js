@@ -1,6 +1,6 @@
 Berry.btn.excite = {
-		label: 'Excite',
-		icon:'wifi fa-rotate-90',
+		label: 'Take Reading',
+		icon:'magnet',
 		id: 'berry-submit',
 		modifier: 'success col-sm-offset-4',
 		click: function() {
@@ -20,7 +20,7 @@ dashView = Backbone.View.extend({
 	onShow: function(){
 				$('#solonoid1.form').berry({actions:['excite', ''] ,attributes: {interval: 10},fields:{
 				// 'Coil': {min:1, max:4, type: 'custom_radio', value: 1},
-				'Direction': {type: 'switch', truestate: 'NORTH', falsestate: 'SOUTH'}
+				// 'Direction': {type: 'switch', truestate: 'NORTH', falsestate: 'SOUTH'}
 			}
 		}).on('save', function(){
 			// alert(this.toJSON().song);
