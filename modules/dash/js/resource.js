@@ -1,4 +1,4 @@
-Berry.btn.excite = {
+Berry.btn.read = {
 		label: 'Take Reading',
 		icon:'magnet',
 		id: 'berry-submit',
@@ -18,7 +18,7 @@ dashView = Backbone.View.extend({
 	template: "dash" ,
 	// childView: resultView,
 	onShow: function(){
-				$('#solonoid1.form').berry({actions:['excite', ''] ,attributes: {interval: 10},fields:{
+				$('#solonoid1.form').berry({actions:['read', ''] ,attributes: {interval: 10},fields:{
 				// 'Coil': {min:1, max:4, type: 'custom_radio', value: 1},
 				// 'Direction': {type: 'switch', truestate: 'NORTH', falsestate: 'SOUTH'}
 			}
