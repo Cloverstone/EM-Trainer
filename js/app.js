@@ -50,6 +50,27 @@ pages.stepper = {load: function(){
 }}
 pages.speaker = {load: function(){
 		contentManager.show( new speakerView());	
+
+		Mousetrap.bind('a', function() { sendCommand('note0262'); });
+		Mousetrap.bind('s', function() { sendCommand('note0294'); });
+		Mousetrap.bind('d', function() { sendCommand('note0330'); });
+		Mousetrap.bind('f', function() { sendCommand('note0349'); });
+		Mousetrap.bind('g', function() { sendCommand('note0392'); });
+		Mousetrap.bind('h', function() { sendCommand('note0440'); });
+		Mousetrap.bind('j', function() { sendCommand('note0494'); });
+		Mousetrap.bind('k', function() { sendCommand('note0523'); });
+
+		Mousetrap.bind('a', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('s', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('d', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('f', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('g', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('h', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('j', function() { sendCommand('noteoff'); }, 'keyup');
+		Mousetrap.bind('k', function() { sendCommand('noteoff'); }, 'keyup');
+
+
+
 }}
 pages.solenoid = {load: function(){
 		contentManager.show( new solenoidView());	

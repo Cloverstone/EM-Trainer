@@ -190,6 +190,20 @@ void loop() {
       digitalWrite(coils[inputString.substring(3,4).toInt()-1], LOW);
     }else if(inputString.startsWith("i")){
       interval = inputString.substring(1,4).toInt();
+    }else if(inputString == "noteoff"){
+      noTone(CoilAA);
+    }else if(inputString.startsWith("note")){
+
+      int note = inputString.substring(5,9).toInt();
+      //int noteDuration = pace1 / 4;
+      tone(CoilAA, note);
+  
+      //int pauseBetweenNotes = noteDuration * 1.30;
+      //delay(pauseBetweenNotes);
+      
+      // stop the tone playing:
+      //noTone(CoilAA);
+
     }else if(inputString.startsWith("play")){
       
       action = RUNNING;
